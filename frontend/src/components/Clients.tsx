@@ -13,7 +13,7 @@ interface Company {
   image: string;
 }
 
-const Portfolio: React.FC = () => {
+const Clients: React.FC = () => {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const [activeCategory, setActiveCategory] = useState('all');
@@ -268,7 +268,7 @@ const Portfolio: React.FC = () => {
         <div className="fixed top-0 left-0 right-0">
           <img
             src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-            alt="Portfolio Hero Background"
+            alt="Clients Hero Background"
             className="w-screen h-screen object-cover fixed"
           />
           <div className="fixed inset-0 bg-black/60"></div>
@@ -276,13 +276,13 @@ const Portfolio: React.FC = () => {
         <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-white text-center">
           <div className="mt-16">
             <h1 className="text-4xl md:text-6xl font-bold">
-              {currentLanguage === 'vi' ? 'KHÁCH HÀNG' : 'PORTFOLIO'}
+              {currentLanguage === 'vi' ? 'KHÁCH HÀNG' : 'CLIENTS'}
             </h1>
           </div>
         </div>
       </div>
 
-      {/* Portfolio Content */}
+      {/* Clients Content */}
       <div className="relative bg-white z-10 py-20 mt-16">
         <div className="container mx-auto px-4">
           {/* Filter Categories */}
@@ -311,7 +311,7 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
         
-          {/* Portfolio Grid */}
+          {/* Clients Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8">
             {filteredCompanies.map((company) => (
         <motion.div 
@@ -347,4 +347,4 @@ const Portfolio: React.FC = () => {
   );
 };
 
-export default Portfolio; 
+export default Clients; 

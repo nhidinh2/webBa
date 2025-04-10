@@ -8,7 +8,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
+import Clients from './components/Clients';
 import VideoSection from './components/VideoSection';
 import Footer from './components/Footer';
 
@@ -39,7 +39,7 @@ function App() {
               <Services />
               <About />
               <VideoSection />
-              <Portfolio />
+              <Clients />
             </div>
           } />
           <Route path="/home" element={
@@ -48,7 +48,7 @@ function App() {
               <Services />
               <About />
               <VideoSection />
-              <Portfolio />
+              <Clients />
             </div>
           } />
           <Route path="/about" element={
@@ -64,7 +64,7 @@ function App() {
           } />
           <Route path="/client" element={
             <div className="pt-20">
-              <Portfolio />
+              <Clients />
             </div>
           } />
         </Routes>

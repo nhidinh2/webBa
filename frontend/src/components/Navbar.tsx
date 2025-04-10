@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
     { name: t('navbar.home'), path: '/' },
     { name: t('navbar.about'), path: '/about' },
     { name: t('navbar.services'), path: '/services' },
-    { name: t('navbar.projects'), path: '/projects' },
+    { name: t('navbar.client'), path: '/client' },
     { name: t('navbar.news'), path: '/news' },
     { name: t('navbar.contact'), path: '/contact' }
   ];
@@ -41,8 +41,8 @@ const Navbar: React.FC = () => {
     <>
       {/* Main Navigation */}
       <motion.nav 
-        className={`sticky top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-darker py-4 shadow-lg' : 'bg-darker py-5'
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          scrolled ? 'bg-darker shadow-lg backdrop-blur-sm bg-opacity-90 py-4' : 'bg-transparent py-6'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex-shrink-0">
-            <Link to="/" className="text-white font-bold text-2xl flex items-center">
+            <Link to="/" className={`font-bold text-2xl flex items-center ${scrolled ? 'text-white' : 'text-white'}`}>
               <div className="mr-3">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="20" cy="20" r="20" fill="#10B981"/>
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
           
           <div className="hidden md:flex items-center space-x-5">
             <LanguageSwitcher />
-            <button className="text-white hover:text-primary transition-colors p-2 rounded-full hover:bg-gray-800">
+            <button className={`hover:text-primary transition-colors p-2 rounded-full hover:bg-gray-800/50 ${scrolled ? 'text-white' : 'text-white'}`}>
               <FiSearch size={20} />
             </button>
             <Link 

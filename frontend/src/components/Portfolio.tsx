@@ -1,174 +1,350 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 
-const categories = [
-  { id: 'all', name: 'ALL PROJECTS', count: 6 },
-  { id: 'infrastructure', name: 'INFRASTRUCTURE' },
-  { id: 'software', name: 'SOFTWARE' },
-  { id: 'cybersecurity', name: 'SECURITY' },
-  { id: 'cloud', name: 'CLOUD' },
-];
+interface Company {
+  id: number;
+  name: string;
+  category: string;
+  description: {
+    en: string;
+    vi: string;
+  };
+  image: string;
+}
 
-const projectItems = [
+const Portfolio: React.FC = () => {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  // Sample company data - replace with your actual company data
+  const companies: Company[] = [
+    // Enterprise Companies (7)
   {
     id: 1,
-    title: 'Enterprise Network Infrastructure',
-    category: 'infrastructure',
-    image: 'https://source.unsplash.com/random/600x600/?network,server',
-    client: 'Financial Institution',
+      name: "Tech Solutions Corp",
+      category: "enterprise",
+      description: {
+        en: "Leading enterprise technology solutions provider",
+        vi: "Nhà cung cấp giải pháp công nghệ doanh nghiệp hàng đầu"
+      },
+      image: "https://source.unsplash.com/random/800x600?business&1"
   },
   {
     id: 2,
-    title: 'Custom ERP Solution',
-    category: 'software',
-    image: 'https://source.unsplash.com/random/600x600/?coding,software',
-    client: 'Manufacturing Company',
+      name: "Digital Innovations Ltd",
+      category: "enterprise",
+      description: {
+        en: "Digital transformation and IT infrastructure",
+        vi: "Chuyển đổi số và cơ sở hạ tầng CNTT"
+      },
+      image: "https://source.unsplash.com/random/800x600?technology&2"
   },
   {
     id: 3,
-    title: 'Data Security Implementation',
-    category: 'cybersecurity',
-    image: 'https://source.unsplash.com/random/600x600/?security,cyber',
-    client: 'Government Agency',
+      name: "Smart Systems Co",
+      category: "enterprise",
+      description: {
+        en: "Intelligent automation solutions",
+        vi: "Giải pháp tự động hóa thông minh"
+      },
+      image: "https://source.unsplash.com/random/800x600?automation&3"
   },
   {
     id: 4,
-    title: 'Cloud Migration Project',
-    category: 'cloud',
-    image: 'https://source.unsplash.com/random/600x600/?cloud,computing',
-    client: 'Retail Chain',
+      name: "Future Tech Inc",
+      category: "enterprise",
+      description: {
+        en: "Next-generation enterprise solutions",
+        vi: "Giải pháp doanh nghiệp thế hệ mới"
+      },
+      image: "https://source.unsplash.com/random/800x600?future&4"
   },
   {
     id: 5,
-    title: 'Network Security Audit',
-    category: 'cybersecurity',
-    image: 'https://source.unsplash.com/random/600x600/?security,network',
-    client: 'Healthcare Provider',
+      name: "Data Systems Corp",
+      category: "enterprise",
+      description: {
+        en: "Enterprise data management solutions",
+        vi: "Giải pháp quản lý dữ liệu doanh nghiệp"
+      },
+      image: "https://source.unsplash.com/random/800x600?data&5"
   },
   {
     id: 6,
-    title: 'Enterprise Cloud Storage',
-    category: 'cloud',
-    image: 'https://source.unsplash.com/random/600x600/?storage,data',
-    client: 'Logistics Company',
-  },
-];
+      name: "Cloud Solutions Ltd",
+      category: "enterprise",
+      description: {
+        en: "Enterprise cloud infrastructure",
+        vi: "Cơ sở hạ tầng đám mây doanh nghiệp"
+      },
+      image: "https://source.unsplash.com/random/800x600?cloud&6"
+    },
+    {
+      id: 7,
+      name: "Network Systems Co",
+      category: "enterprise",
+      description: {
+        en: "Enterprise networking solutions",
+        vi: "Giải pháp mạng doanh nghiệp"
+      },
+      image: "https://source.unsplash.com/random/800x600?network&7"
+    },
 
-const Projects: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  
-  const filteredItems = activeCategory === 'all' 
-    ? projectItems 
-    : projectItems.filter(item => item.category === activeCategory);
+    // Banking Companies (7)
+    {
+      id: 8,
+      name: "VietBank Corp",
+      category: "bank",
+      description: {
+        en: "Digital banking transformation",
+        vi: "Chuyển đổi số ngân hàng"
+      },
+      image: "https://source.unsplash.com/random/800x600?bank&8"
+    },
+    {
+      id: 9,
+      name: "Finance Solutions",
+      category: "bank",
+      description: {
+        en: "Financial technology solutions",
+        vi: "Giải pháp công nghệ tài chính"
+      },
+      image: "https://source.unsplash.com/random/800x600?finance&9"
+    },
+    {
+      id: 10,
+      name: "Digital Banking Co",
+      category: "bank",
+      description: {
+        en: "Modern banking infrastructure",
+        vi: "Cơ sở hạ tầng ngân hàng hiện đại"
+      },
+      image: "https://source.unsplash.com/random/800x600?banking&10"
+    },
+    {
+      id: 11,
+      name: "Payment Tech Ltd",
+      category: "bank",
+      description: {
+        en: "Payment processing solutions",
+        vi: "Giải pháp xử lý thanh toán"
+      },
+      image: "https://source.unsplash.com/random/800x600?payment&11"
+    },
+    {
+      id: 12,
+      name: "Secure Banking Systems",
+      category: "bank",
+      description: {
+        en: "Secure banking infrastructure",
+        vi: "Cơ sở hạ tầng ngân hàng an toàn"
+      },
+      image: "https://source.unsplash.com/random/800x600?security&12"
+    },
+    {
+      id: 13,
+      name: "FinTech Solutions",
+      category: "bank",
+      description: {
+        en: "Financial technology innovation",
+        vi: "Đổi mới công nghệ tài chính"
+      },
+      image: "https://source.unsplash.com/random/800x600?fintech&13"
+    },
+    {
+      id: 14,
+      name: "Banking Tech Corp",
+      category: "bank",
+      description: {
+        en: "Banking technology solutions",
+        vi: "Giải pháp công nghệ ngân hàng"
+      },
+      image: "https://source.unsplash.com/random/800x600?banking&14"
+    },
+
+    // Government Agencies (3)
+    {
+      id: 15,
+      name: "Government Digital Agency",
+      category: "government",
+      description: {
+        en: "National digital transformation initiative",
+        vi: "Sáng kiến chuyển đổi số quốc gia"
+      },
+      image: "https://source.unsplash.com/random/800x600?government&15"
+    },
+    {
+      id: 16,
+      name: "Public Services Tech",
+      category: "government",
+      description: {
+        en: "Public service digitalization",
+        vi: "Số hóa dịch vụ công"
+      },
+      image: "https://source.unsplash.com/random/800x600?public&16"
+    },
+    {
+      id: 17,
+      name: "Smart City Solutions",
+      category: "government",
+      description: {
+        en: "Smart city infrastructure",
+        vi: "Cơ sở hạ tầng thành phố thông minh"
+      },
+      image: "https://source.unsplash.com/random/800x600?city&17"
+    },
+
+    // Foreign Companies (5)
+    {
+      id: 18,
+      name: "Global Tech Solutions",
+      category: "foreign",
+      description: {
+        en: "International technology services",
+        vi: "Dịch vụ công nghệ quốc tế"
+      },
+      image: "https://source.unsplash.com/random/800x600?global&18"
+    },
+    {
+      id: 19,
+      name: "Worldwide Systems Inc",
+      category: "foreign",
+      description: {
+        en: "Global IT infrastructure",
+        vi: "Cơ sở hạ tầng CNTT toàn cầu"
+      },
+      image: "https://source.unsplash.com/random/800x600?worldwide&19"
+    },
+    {
+      id: 20,
+      name: "International Data Corp",
+      category: "foreign",
+      description: {
+        en: "International data solutions",
+        vi: "Giải pháp dữ liệu quốc tế"
+      },
+      image: "https://source.unsplash.com/random/800x600?international&20"
+    },
+    {
+      id: 21,
+      name: "Global Network Ltd",
+      category: "foreign",
+      description: {
+        en: "Global networking solutions",
+        vi: "Giải pháp mạng toàn cầu"
+      },
+      image: "https://source.unsplash.com/random/800x600?network&21"
+    },
+    {
+      id: 22,
+      name: "Multinational Tech Co",
+      category: "foreign",
+      description: {
+        en: "Multinational technology services",
+        vi: "Dịch vụ công nghệ đa quốc gia"
+      },
+      image: "https://source.unsplash.com/random/800x600?multinational&22"
+    }
+  ];
+
+  const categories = [
+    { id: 'all', label: currentLanguage === 'vi' ? 'TẤT CẢ' : 'ALL', count: companies.length },
+    { id: 'enterprise', label: currentLanguage === 'vi' ? 'DOANH NGHIỆP' : 'ENTERPRISE', count: 7 },
+    { id: 'bank', label: currentLanguage === 'vi' ? 'NGÂN HÀNG' : 'BANKING', count: 7 },
+    { id: 'government', label: currentLanguage === 'vi' ? 'CHÍNH PHỦ' : 'GOVERNMENT', count: 3 },
+    { id: 'foreign', label: currentLanguage === 'vi' ? 'NƯỚC NGOÀI' : 'FOREIGN', count: 5 }
+  ];
+
+  const filteredCompanies = activeCategory === 'all' 
+    ? companies 
+    : companies.filter(company => company.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
-      <div className="absolute top-40 -right-20 w-80 h-80 bg-primary opacity-5 rounded-full"></div>
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary opacity-5 rounded-full"></div>
-      
-      <div className="container relative z-10 mx-auto px-4">
-        <motion.div 
-          className="max-w-2xl mx-auto text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Our Projects
+    <section className="relative">
+      {/* Hero Banner */}
+      <div className="relative h-[40vh] mt-0 w-full">
+        <div className="fixed top-0 left-0 right-0">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+            alt="Portfolio Hero Background"
+            className="w-screen h-screen object-cover fixed"
+          />
+          <div className="fixed inset-0 bg-black/60"></div>
+        </div>
+        <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-white text-center">
+          <div className="mt-16">
+            <h1 className="text-4xl md:text-6xl font-bold">
+              {currentLanguage === 'vi' ? 'KHÁCH HÀNG' : 'PORTFOLIO'}
+            </h1>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Recent Success Stories
-          </h2>
-          <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
-          <p className="text-gray-600">
-            Explore our latest projects and discover how we've helped businesses across Vietnam overcome their technology challenges and achieve digital transformation.
-          </p>
-        </motion.div>
-        
-        <div className="flex flex-wrap justify-center mb-12">
+        </div>
+      </div>
+
+      {/* Portfolio Content */}
+      <div className="relative bg-white z-10 py-20 mt-16">
+        <div className="container mx-auto px-4">
+          {/* Filter Categories */}
+          <div className="flex flex-wrap justify-center gap-6 mb-6">
           {categories.map((category) => (
-            <motion.button
+              <button
               key={category.id}
-              className={`px-5 py-2 mx-2 mb-4 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === category.id 
-                  ? 'bg-primary text-white shadow-md' 
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
-              }`}
-              onClick={() => setActiveCategory(category.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {category.name}
-              {category.count && <span className="ml-1 text-xs">{`(${category.count})`}</span>}
-            </motion.button>
+                onClick={() => setActiveCategory(category.id)}
+                className={`relative px-6 py-2 text-sm font-medium transition-colors
+                  ${activeCategory === category.id 
+                    ? 'text-primary' 
+                    : 'text-gray-600 hover:text-primary'
+                  }`}
+              >
+                {category.label}
+                {category.count && (
+                  <span className="ml-1 text-xs">({category.count})</span>
+                )}
+                {activeCategory === category.id && (
+                  <motion.div
+                    layoutId="underline"
+                    className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary"
+                  />
+                )}
+              </button>
           ))}
         </div>
         
+          {/* Portfolio Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8">
+            {filteredCompanies.map((company) => (
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          layout
-        >
-          <AnimatePresence>
-            {filteredItems.map((item) => (
-              <motion.div 
-                key={item.id}
-                layout
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
+                key={company.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="group rounded-xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="group relative overflow-hidden rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
               >
-                <div className="relative overflow-hidden aspect-video">
-                  <img 
-                    src={item.image} 
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                <div className="relative h-48 w-full overflow-hidden">
+                  <img
+                    src={company.image}
+                    alt={company.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 left-4">
-                    <span className="inline-block px-3 py-1 rounded-full bg-primary/80 text-white text-xs font-medium">
-                      {categories.find(c => c.id === item.category)?.name}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors duration-300">{item.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4">Client: {item.client}</p>
-                  <div className="flex justify-between items-center">
-                    <div className="h-0.5 w-12 bg-primary/50 transition-all duration-300 group-hover:w-20"></div>
-                    <a href={`#project-${item.id}`} className="inline-flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 group-hover:translate-x-0 -translate-x-4">
-                      View Project
-                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                      </svg>
-                    </a>
+                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-center text-white p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <h3 className="text-lg font-bold">{company.name}</h3>
+                      <p className="mt-2 text-sm">{currentLanguage === 'vi' ? company.description.vi : company.description.en}</p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </AnimatePresence>
-        </motion.div>
-        
-        <div className="text-center mt-16">
-          <motion.a 
-            href="/all-projects"
-            className="btn inline-flex items-center bg-white text-dark border border-gray-300 px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition-colors"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            View All Projects
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </motion.a>
+          </div>
         </div>
+
+        {/* Diagonal Shape */}
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 -mb-48 -mr-48 transform rotate-45"></div>
       </div>
     </section>
   );
 };
 
-export default Projects; 
+export default Portfolio; 

@@ -1,9 +1,9 @@
+/* AOS animation styles */
+@import 'aos/dist/aos.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* AOS animation styles */
-@import 'aos/dist/aos.css';
 
 :root {
   --primary: #10B981; /* Emerald-500 from Tailwind */

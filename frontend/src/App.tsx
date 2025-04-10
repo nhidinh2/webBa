@@ -36,9 +36,30 @@ function App() {
               <Projects />
             </>
           } />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/home" element={
+            <>
+              <Hero />
+              <Services />
+              <About />
+              <VideoSection />
+              <Projects />
+            </>
+          } />
+          <Route path="/about" element={
+            <div className="pt-20">
+              <About />
+            </div>
+          } />
+          <Route path="/services" element={
+            <div className="pt-20">
+              <Services />
+            </div>
+          } />
+          <Route path="/projects" element={
+            <div className="pt-20">
+              <Projects />
+            </div>
+          } />
         </Routes>
         
         <Footer />

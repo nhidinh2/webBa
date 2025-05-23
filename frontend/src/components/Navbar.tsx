@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FiSearch, FiUser } from 'react-icons/fi';
+import { FiSearch, FiUser, FiChevronDown } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+
+const services = [
+  { name: 'ICT', path: '/services/ict' },
+  { name: 'Broadcasting', path: '/services/broadcasting' },
+  { name: 'Business Application', path: '/services/business-application' },
+  { name: 'M&E', path: '/services/me' },
+];
 
 const Navbar: React.FC = () => {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const { t } = useTranslation();
   
   useEffect(() => {
@@ -25,6 +33,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/' || location.pathname === '/home';
+    }
     return location.pathname === path;
   };
 
@@ -33,6 +44,7 @@ const Navbar: React.FC = () => {
     { name: t('navbar.about'), path: '/about' },
     { name: t('navbar.services'), path: '/services' },
     { name: t('navbar.client'), path: '/client' },
+    { name: t('navbar.partners'), path: '/partners' },
     { name: t('navbar.news'), path: '/news' },
     { name: t('navbar.contact'), path: '/contact' }
   ];
@@ -42,7 +54,7 @@ const Navbar: React.FC = () => {
       {/* Main Navigation */}
       <motion.nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-darker shadow-lg backdrop-blur-sm bg-opacity-90 py-4' : 'bg-transparent py-6'
+          scrolled ? 'bg-black/80 shadow-lg backdrop-blur-sm py-4' : 'bg-transparent py-6'
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -64,23 +76,60 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-2">
             {navItems.map((item) => (
-              <Link 
-                key={item.path}
-                to={item.path} 
-                className={`nav-link px-5 py-3 font-medium transition-all duration-300 relative group ${
-                  isActive(item.path) 
-                    ? 'text-primary' 
-                    : 'text-white hover:text-primary'
-                }`}
-              >
-                {item.name}
-                {isActive(item.path) && (
-                  <motion.div 
-                    className="absolute bottom-0 left-0 h-0.5 bg-primary w-full" 
-                    layoutId="navbar-indicator"
-                  />
-                )}
-              </Link>
+              item.path === '/services' ? (
+                <div key={item.path} className="relative group">
+                  <Link
+                    to={item.path}
+                    className={`nav-link px-5 py-3 font-medium transition-all duration-300 flex items-center ${
+                      location.pathname.startsWith('/services')
+                        ? 'text-primary'
+                        : 'text-white hover:text-primary'
+                    }`}
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    {item.name}
+                    <FiChevronDown className="ml-1" />
+                  </Link>
+                  {servicesOpen && (
+                    <div
+                      className="absolute top-full left-0 w-64 bg-white rounded-md shadow-lg py-2 mt-1"
+                      onMouseEnter={() => setServicesOpen(true)}
+                      onMouseLeave={() => setServicesOpen(false)}
+                    >
+                      {services.map((service) => (
+                        <Link
+                          key={service.path}
+                          to={service.path}
+                          className={`block px-4 py-2 text-gray-800 transition-colors duration-200 ${
+                            location.pathname === service.path ? 'text-primary' : 'hover:text-primary hover:bg-primary/10'
+                          }`}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link 
+                  key={item.path}
+                  to={item.path} 
+                  className={`nav-link px-5 py-3 font-medium transition-all duration-300 relative group ${
+                    isActive(item.path) 
+                      ? 'text-primary' 
+                      : 'text-white hover:text-primary'
+                  }`}
+                >
+                  {item.name}
+                  {isActive(item.path) && (
+                    <motion.div 
+                      className="absolute bottom-0 left-0 h-0.5 bg-primary w-full" 
+                      layoutId="navbar-indicator"
+                    />
+                  )}
+                </Link>
+              )
             ))}
           </div>
           
@@ -89,12 +138,6 @@ const Navbar: React.FC = () => {
             <button className={`hover:text-primary transition-colors p-2 rounded-full hover:bg-gray-800/50 ${scrolled ? 'text-white' : 'text-white'}`}>
               <FiSearch size={20} />
             </button>
-            <Link 
-              to="/contact" 
-              className="btn bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary-dark transition-colors shadow-md flex items-center"
-            >
-              <FiUser className="mr-2" /> {t('navbar.clientPortal')}
-            </Link>
           </div>
           
           {/* Mobile menu button */}
@@ -121,32 +164,59 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="container mx-auto px-4 flex flex-col space-y-3">
+              {/* Regular nav items */}
               {navItems.map((item) => (
-                <Link 
-                  key={item.path}
-                  to={item.path} 
-                  className={`px-4 py-3 font-medium rounded-md flex justify-between items-center ${
-                    isActive(item.path) 
-                      ? 'text-primary bg-gray-800/50' 
-                      : 'text-white hover:text-primary hover:bg-gray-800/30'
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                  {isActive(item.path) && (
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                  )}
-                </Link>
+                item.path === '/services' ? (
+                  <div key={item.path}>
+                    <Link 
+                      to={item.path}
+                      className={`px-4 py-3 font-medium rounded-md flex justify-between items-center transition-colors duration-200 ${
+                        location.pathname === '/services'
+                          ? 'text-primary' 
+                          : 'text-white hover:text-primary hover:bg-gray-800/30'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                    {/* Service sub-items */}
+                    <div className="ml-4 mt-2 space-y-2">
+                      {services.map((service) => (
+                        <Link
+                          key={service.path}
+                          to={service.path}
+                          className={`block px-4 py-2 rounded-md transition-colors duration-200 ${
+                            location.pathname === service.path
+                              ? 'text-primary'
+                              : 'text-gray-300 hover:text-primary hover:bg-gray-800/30'
+                          }`}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link 
+                    key={item.path}
+                    to={item.path} 
+                    className={`px-4 py-3 font-medium rounded-md flex justify-between items-center transition-colors duration-200 ${
+                      isActive(item.path) 
+                        ? 'text-primary' 
+                        : 'text-white hover:text-primary hover:bg-gray-800/30'
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                    {isActive(item.path) && (
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                    )}
+                  </Link>
+                )
               ))}
               <div className="pt-3 mt-2 border-t border-gray-800 flex justify-between items-center">
                 <LanguageSwitcher />
-                <Link 
-                  to="/contact" 
-                  className="btn bg-primary text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-primary-dark transition-colors flex items-center"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <FiUser className="mr-2" /> {t('navbar.clientPortal')}
-                </Link>
               </div>
             </div>
           </motion.div>

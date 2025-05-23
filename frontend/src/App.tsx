@@ -9,8 +9,15 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Clients from './components/Clients';
+import Partners from './components/Partners';
 import VideoSection from './components/VideoSection';
 import Footer from './components/Footer';
+import Contact from './screens/Contact';
+import IctServicePage from './screens/IctServicePage';
+import BroadcastingServicePage from './screens/BroadcastingServicePage';
+import BusinessApplicationServicePage from './screens/BusinessApplicationServicePage';
+import MeServicePage from './screens/MeServicePage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const { i18n } = useTranslation();
@@ -30,6 +37,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-light relative">
         <Navbar />
         <Routes>
@@ -67,6 +75,16 @@ function App() {
               <Clients />
             </div>
           } />
+          <Route path="/partners" element={
+            <div className="pt-20">
+              <Partners />
+            </div>
+          } />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services/ict" element={<IctServicePage />} />
+          <Route path="/services/broadcasting" element={<BroadcastingServicePage />} />
+          <Route path="/services/business-application" element={<BusinessApplicationServicePage />} />
+          <Route path="/services/me" element={<MeServicePage />} />
         </Routes>
         <Footer />
       </div>

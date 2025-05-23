@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import Breadcrumb from './Breadcrumb';
 
 type TabType = 'humanResource' | 'visionMission' | 'coreValues';
 
@@ -53,24 +54,50 @@ const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="mt-0">
+    <section id="about" className="relative">
       {/* Hero Banner */}
       <div className="relative h-[40vh] mt-0 w-full">
         <div className="fixed top-0 left-0 right-0">
           <img
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
             alt="About Hero Background"
             className="w-screen h-screen object-cover fixed"
           />
           <div className="fixed inset-0 bg-black/60"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-white text-center">
-          <div className="mt-24">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              {currentLanguage === 'vi' ? heroContent.title.vi : heroContent.title.en}
-            </h1>
-            <p className="text-lg uppercase tracking-wider">
-            </p>
+          <div className="mt-16">
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              {currentLanguage === 'vi' ? 'VỀ CHÚNG TÔI' : 'ABOUT US'}
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Breadcrumb
+                items={[
+                  { 
+                    name: { 
+                      en: 'Home',
+                      vi: 'Trang chủ'
+                    }, 
+                    path: '/' 
+                  },
+                  { 
+                    name: { 
+                      en: 'About',
+                      vi: 'Về chúng tôi'
+                    }
+                  }
+                ]}
+              />
+            </motion.div>
           </div>
         </div>
       </div>
@@ -79,17 +106,29 @@ const About: React.FC = () => {
       <div className="relative py-20 bg-white z-10 mt-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div className="relative">
-              <div className="aspect-[4/3] relative">
-                <div className="absolute bottom-0 left-0 w-full h-1/3 bg-primary clip-diagonal"></div>
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
                   alt="Team Meeting"
                   className="w-full h-full object-cover"
                 />
+                <div 
+                  className="absolute bottom-0 left-0 w-0 h-0 border-l-[120px] border-t-[120px] border-t-transparent" 
+                  style={{ borderLeftColor: 'var(--primary)' }}
+                ></div>
               </div>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 {currentLanguage === 'vi' ? (
                   <>CÔNG TY CỔ PHẦN <br/><span className="text-primary">NETCORP</span></>
@@ -103,7 +142,11 @@ const About: React.FC = () => {
                   : "NetCorp Corporation includes 2 companies Netsys and iERP"}
               </p>
               <div className="grid grid-cols-1 gap-8">
-                <div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
                   <h3 className="text-xl font-bold mb-2 flex items-center">
                     <span className="text-primary mr-2">•</span> NETCORP
                   </h3>
@@ -112,8 +155,12 @@ const About: React.FC = () => {
                       ? "Thành lập năm 2005, NETCORP cung cấp dịch vụ tổng thể, từ triển khai trung tâm dữ liệu, máy chủ, hệ thống mạng, tổng đài, hệ thống bảo mật, hệ thống điện, ảo hoá, dịch vụ quản lý và bảo hành, bảo trì... Tới nay, NETCORP đã có những thành tựu đáng kể trong ngành công nghệ thông tin, góp phần trong sự phát triển chung của ngành."
                       : "Established in 2005, NETCORP provides total services, from deploying data centers, servers, network systems, switchboards, security systems, power systems, virtualization, management services and warranty, maintenance... Up to now, NETCORP has made remarkable achievements in the information technology industry, contributing to the overall development of the industry."}
                   </p>
-                </div>
-                <div>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
                   <h3 className="text-xl font-bold mb-2 flex items-center">
                     <span className="text-primary mr-2">•</span> IERP
                   </h3>
@@ -122,9 +169,9 @@ const About: React.FC = () => {
                       ? "Năm 2013, IERP ra đời, tập trung vào các giải pháp tổng thể quản trị (ERP - Enterprise Resource Planning) và BI (Business Intelligence) cho các doanh nghiệp và các tổ chức. Đặc biệt, IERP là chuyên gia về tư vấn giải pháp, giám sát và triển khai các ứng dụng quản trị cho các doanh nghiệp và các tổ chức sử dụng công nghệ nền tảng của hãng Oracle."
                       : "In 2013, IERP was born, focusing on total management solutions (ERP - Enterprise Resource Planning) and BI (Business Intelligence) for businesses and organizations. In particular, IERP is an expert in consulting solutions, monitoring and deploying administrative applications for businesses and organizations using Oracle's platform technology."}
                   </p>
-                </div>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -7,7 +7,8 @@
     "news": "News",
     "contact": "Contact",
     "client": "Clients",
-    "clientPortal": "Client Portal"
+    "clientPortal": "Client Portal",
+    "partners": "Partners"
   },
   "hero": {
     "tagline": "Leading Technology Solutions in Vietnam",
@@ -114,5 +115,16 @@
   "language": {
     "en": "English",
     "vi": "Vietnamese"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "subtitle": "Strategic Technology Partnerships",
+    "description": "Collaborating with industry leaders to deliver cutting-edge solutions.",
+    "categories": {
+      "all": "All Partners",
+      "technology": "Technology Partners",
+      "consulting": "Consulting Partners",
+      "security": "Security Partners"
+    }
   }
 } 

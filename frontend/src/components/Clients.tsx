@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import Breadcrumb from './Breadcrumb';
 
 interface Company {
   id: number;
@@ -275,27 +276,73 @@ const Clients: React.FC = () => {
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col items-center justify-center text-white text-center">
           <div className="mt-16">
-            <h1 className="text-4xl md:text-6xl font-bold">
+            <motion.h1 
+              className="text-4xl md:text-6xl font-bold mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
               {currentLanguage === 'vi' ? 'KHÁCH HÀNG' : 'CLIENTS'}
-            </h1>
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <Breadcrumb
+                items={[
+                  { 
+                    name: { 
+                      en: 'Home',
+                      vi: 'Trang chủ'
+                    }, 
+                    path: '/' 
+                  },
+                  { 
+                    name: { 
+                      en: 'Clients',
+                      vi: 'Khách hàng'
+                    }
+                  }
+                ]}
+              />
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Clients Content */}
-      <div className="relative bg-white z-10 py-20 mt-16">
+      <div className="relative bg-white z-10 py-12 mt-8">
         <div className="container mx-auto px-4">
+          {/* Thank You Message */}
+          <motion.div 
+            className="text-center max-w-4xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {currentLanguage === 'vi' 
+                ? "Netcorp trân trọng cảm ơn những khách hàng đã tin tưởng lựa chọn chúng tôi là đơn vị cung cấp và triển khai thành công các giải pháp, sản phẩm công nghệ thông tin mang lại hiệu quả tối ưu."
+                : "Netcorp sincerely thanks our valued customers for trusting us as the provider and successful implementer of information technology solutions and products that deliver optimal efficiency."
+              }
+            </p>
+          </motion.div>
+
           {/* Filter Categories */}
-          <div className="flex flex-wrap justify-center gap-6 mb-6">
-          {categories.map((category) => (
-              <button
-              key={category.id}
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            {categories.map((category) => (
+              <motion.button
+                key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 className={`relative px-6 py-2 text-sm font-medium transition-colors
                   ${activeCategory === category.id 
                     ? 'text-primary' 
                     : 'text-gray-600 hover:text-primary'
                   }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {category.label}
                 {category.count && (
@@ -307,19 +354,19 @@ const Clients: React.FC = () => {
                     className="absolute left-0 right-0 bottom-0 h-0.5 bg-primary"
                   />
                 )}
-              </button>
-          ))}
-        </div>
-        
+              </motion.button>
+            ))}
+          </div>
+
           {/* Clients Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6 lg:gap-8">
-            {filteredCompanies.map((company) => (
-        <motion.div 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {filteredCompanies.map((company, index) => (
+              <motion.div 
                 key={company.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
               >
                 <div className="relative h-48 w-full overflow-hidden">
@@ -330,8 +377,8 @@ const Clients: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-center text-white p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-lg font-bold">{company.name}</h3>
-                      <p className="mt-2 text-sm">{currentLanguage === 'vi' ? company.description.vi : company.description.en}</p>
+                      <h3 className="text-lg font-bold mb-2">{company.name}</h3>
+                      <p className="text-sm">{currentLanguage === 'vi' ? company.description.vi : company.description.en}</p>
                     </div>
                   </div>
                 </div>
@@ -340,8 +387,9 @@ const Clients: React.FC = () => {
           </div>
         </div>
 
-        {/* Diagonal Shape */}
+        {/* Background Elements */}
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 -mb-48 -mr-48 transform rotate-45"></div>
+        <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 -ml-36 rounded-full filter blur-3xl"></div>
       </div>
     </section>
   );

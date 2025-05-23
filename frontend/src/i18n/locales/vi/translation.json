@@ -7,7 +7,8 @@
     "news": "Tin tức",
     "contact": "Liên hệ",
     "client": "Khách hàng",
-    "clientPortal": "Cổng khách hàng"
+    "clientPortal": "Cổng khách hàng",
+    "partners": "Đối tác"
   },
   "hero": {
     "tagline": "Giải pháp Công nghệ Hàng đầu tại Việt Nam",
@@ -114,5 +115,16 @@
   "language": {
     "en": "Tiếng Anh",
     "vi": "Tiếng Việt"
+  },
+  "partners": {
+    "title": "Đối tác của Chúng tôi",
+    "subtitle": "Quan hệ Đối tác Công nghệ Chiến lược",
+    "description": "Hợp tác với các đơn vị hàng đầu trong ngành để cung cấp giải pháp tiên tiến.",
+    "categories": {
+      "all": "Tất cả Đối tác",
+      "technology": "Đối tác Công nghệ",
+      "consulting": "Đối tác Tư vấn",
+      "security": "Đối tác An ninh"
+    }
   }
 } 

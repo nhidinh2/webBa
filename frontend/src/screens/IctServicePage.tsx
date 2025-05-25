@@ -21,7 +21,7 @@ const IctServicePage: React.FC = () => {
       {/* Hero Banner */}
       <div className="relative h-[60vh] w-full flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80"
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="ICT Service Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -33,7 +33,7 @@ const IctServicePage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {isEn ? 'ICT' : 'ICT'}
+            ICT
           </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -78,13 +78,13 @@ const IctServicePage: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-bold mb-6">
-              {isEn ? 'ICT Infrastructure Solutions' : 'Giải Pháp Hạ Tầng CNTT'}
-          </h2>
+              {isEn ? 'ICT Solutions' : 'Giải Pháp ICT'}
+            </h2>
             <div className="h-1 w-20 bg-primary mb-8"></div>
             <p className="text-gray-600 mb-8 leading-relaxed">
               {isEn 
-                ? "NETCORP GROUP specializes in providing comprehensive ICT infrastructure solutions, helping businesses build and optimize their technology foundation for sustainable growth and digital transformation."
-                : "NETCORP GROUP chuyên cung cấp các giải pháp hạ tầng CNTT toàn diện, giúp doanh nghiệp xây dựng và tối ưu hóa nền tảng công nghệ cho sự phát triển bền vững và chuyển đổi số."}
+                ? "We deliver cutting-edge Information and Communication Technology solutions that empower businesses to thrive in the digital age through innovative infrastructure, security, and networking services."
+                : "Chúng tôi cung cấp giải pháp Công nghệ Thông tin và Truyền thông tiên tiến giúp doanh nghiệp phát triển mạnh mẽ trong kỷ nguyên số thông qua các dịch vụ cơ sở hạ tầng, bảo mật và mạng đổi mới."}
             </p>
           </motion.div>
 
@@ -94,70 +94,70 @@ const IctServicePage: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-4">
-              {isEn ? 'Our ICT Solutions' : 'Giải Pháp CNTT Của Chúng Tôi'}
+              {isEn ? 'Our ICT Solutions' : 'Giải Pháp ICT Của Chúng Tôi'}
             </h3>
             <div className="space-y-6">
-            {isEn ? (
-              <>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Server Solutions</h4>
-                    <p className="text-gray-600">As a trusted partner of Oracle, Dell, HP, and Fujitsu, NETCORP GROUP delivers comprehensive server solutions. Notable clients include VICEM Cement Group, Bac A Bank, and MIC Insurance.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Data Storage</h4>
-                    <p className="text-gray-600">We offer a full range of storage solutions, from DAS for smaller data loads to SAN systems for high-capacity, secure enterprise data centers. Our solutions ensure data backup, recovery, sharing, and management.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Monitoring Systems</h4>
-                    <p className="text-gray-600">Monitoring is essential for any IT infrastructure. With proactive system surveillance, companies can detect and fix issues before they disrupt operations, thereby improving service quality and reducing operational costs.</p>
-                  </motion.div>
-              </>
-            ) : (
-              <>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Giải pháp Máy chủ</h4>
-                    <p className="text-gray-600">Là đối tác tin cậy của Oracle, Dell, HP và Fujitsu, NETCORP GROUP cung cấp giải pháp máy chủ toàn diện. Khách hàng tiêu biểu bao gồm Tập đoàn Xi măng VICEM, Ngân hàng Bắc Á và Bảo hiểm MIC.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Lưu trữ Dữ liệu</h4>
-                    <p className="text-gray-600">Chúng tôi cung cấp đầy đủ các giải pháp lưu trữ, từ DAS cho khối lượng dữ liệu nhỏ đến hệ thống SAN cho trung tâm dữ liệu doanh nghiệp có dung lượng cao, an toàn. Giải pháp của chúng tôi đảm bảo sao lưu, khôi phục, chia sẻ và quản lý dữ liệu.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Hệ thống Giám sát</h4>
-                    <p className="text-gray-600">Giám sát là yếu tố quan trọng đối với mọi cơ sở hạ tầng CNTT. Với giám sát hệ thống chủ động, doanh nghiệp có thể phát hiện và khắc phục sự cố trước khi chúng gây gián đoạn hoạt động, từ đó cải thiện chất lượng dịch vụ và giảm chi phí vận hành.</p>
-                  </motion.div>
-              </>
-            )}
+              {isEn ? (
+                <>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Network Infrastructure</h4>
+                  <p className="text-gray-600">Comprehensive networking solutions including design, implementation, and maintenance of enterprise-grade networks, ensuring optimal performance and reliability.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Cybersecurity Services</h4>
+                  <p className="text-gray-600">Advanced security solutions to protect your digital assets, including threat detection, prevention, and response capabilities.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Cloud Solutions</h4>
+                  <p className="text-gray-600">Scalable cloud infrastructure and services that enable digital transformation and business agility.</p>
+                </motion.div>
+                </>
+              ) : (
+                <>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Cơ sở Hạ tầng Mạng</h4>
+                  <p className="text-gray-600">Giải pháp mạng toàn diện bao gồm thiết kế, triển khai và bảo trì mạng cấp doanh nghiệp, đảm bảo hiệu suất và độ tin cậy tối ưu.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Dịch vụ An ninh mạng</h4>
+                  <p className="text-gray-600">Giải pháp bảo mật tiên tiến để bảo vệ tài sản số của bạn, bao gồm khả năng phát hiện, ngăn chặn và phản ứng với các mối đe dọa.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Giải pháp Đám mây</h4>
+                  <p className="text-gray-600">Cơ sở hạ tầng và dịch vụ đám mây có khả năng mở rộng cho phép chuyển đổi số và linh hoạt trong kinh doanh.</p>
+                </motion.div>
+                </>
+              )}
             </div>
           </motion.div>
         </div>
@@ -171,11 +171,11 @@ const IctServicePage: React.FC = () => {
         >
           {/* All Services List */}
           <div className="space-y-6">
-          <div className="bg-gray-50 rounded-xl shadow p-6">
-            <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">
-              {isEn ? 'All Services' : 'Tất cả dịch vụ'}
-            </h4>
-            <ul className="space-y-2">
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">
+                {isEn ? 'All Services' : 'Tất cả dịch vụ'}
+              </h4>
+              <ul className="space-y-2">
                 {services.map((service, index) => (
                   <motion.li 
                     key={typeof service.name === 'string' ? service.name : service.name.en}
@@ -183,20 +183,20 @@ const IctServicePage: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.1 * index }}
                   >
-                  <Link
-                    to={service.path}
-                    className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors font-medium text-gray-700 hover:bg-primary/10 hover:text-primary ${
-                      (typeof service.name === 'string' ? service.name : service.name.en) === 'ICT' 
-                        ? 'bg-primary/10 text-primary border-l-4 border-primary' 
-                        : ''
-                    }`}
-                  >
-                    {typeof service.name === 'string' ? service.name : isEn ? service.name.en : service.name.vi}
-                    <FiChevronRight className="ml-2" />
-                  </Link>
+                    <Link
+                      to={service.path}
+                      className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors font-medium text-gray-700 hover:bg-primary/10 hover:text-primary ${
+                        (typeof service.name === 'string' ? service.name : service.name.en) === 'ICT' 
+                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
+                          : ''
+                      }`}
+                    >
+                      {typeof service.name === 'string' ? service.name : isEn ? service.name.en : service.name.vi}
+                      <FiChevronRight className="ml-2" />
+                    </Link>
                   </motion.li>
-              ))}
-            </ul>
+                ))}
+              </ul>
             </div>
 
             {/* Need Consultation Section */}

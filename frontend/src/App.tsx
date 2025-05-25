@@ -5,19 +5,18 @@ import AOS from 'aos';
 
 // Components
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
 import About from './components/About';
 import Clients from './components/Clients';
 import Partners from './components/Partners';
-import VideoSection from './components/VideoSection';
 import Footer from './components/Footer';
 import Contact from './screens/Contact';
+import Home from './screens/Home';
 import IctServicePage from './screens/IctServicePage';
 import BroadcastingServicePage from './screens/BroadcastingServicePage';
 import BusinessApplicationServicePage from './screens/BusinessApplicationServicePage';
 import MeServicePage from './screens/MeServicePage';
 import ScrollToTop from './components/ScrollToTop';
+import Services from './components/Services';
 
 function App() {
   const { i18n } = useTranslation();
@@ -41,35 +40,14 @@ function App() {
       <div className="min-h-screen bg-light relative">
         <Navbar />
         <Routes>
-          <Route path="/" element={
-            <div className="pt-20">
-              <Hero />
-              <Services />
-              <About />
-              <VideoSection />
-              <Clients />
-            </div>
-          } />
-          <Route path="/home" element={
-            <div className="pt-20">
-              <Hero />
-              <Services />
-              <About />
-              <VideoSection />
-              <Clients />
-            </div>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/about" element={
             <div className="pt-20">
               <About />
             </div>
           } />
           <Route path="/about/home" element={<Navigate to="/" replace />} />
-          <Route path="/services" element={
-            <div className="pt-20">
-              <Services />
-            </div>
-          } />
           <Route path="/client" element={
             <div className="pt-20">
               <Clients />
@@ -81,6 +59,11 @@ function App() {
             </div>
           } />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={
+            <div className="pt-20">
+              <Services />
+            </div>
+          } />
           <Route path="/services/ict" element={<IctServicePage />} />
           <Route path="/services/broadcasting" element={<BroadcastingServicePage />} />
           <Route path="/services/business-application" element={<BusinessApplicationServicePage />} />

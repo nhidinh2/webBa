@@ -16,7 +16,7 @@
   }
   
   body {
-    @apply font-sans bg-gray-50 text-gray-800;
+    @apply font-sans bg-white text-gray-800;
     min-height: 100vh;
     overflow-x: hidden;
   }
@@ -69,6 +69,39 @@
   
   .active-nav-link {
     @apply text-primary;
+  }
+
+  /* Work Showcase styles */
+  .work-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .work-item {
+    @apply relative overflow-hidden bg-white;
+  }
+
+  .work-image {
+    @apply w-full h-full object-cover transition-transform duration-700;
+  }
+
+  .work-overlay {
+    @apply absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 flex items-center justify-center;
+  }
+
+  .work-content {
+    @apply text-center text-white transform translate-y-4 transition-transform duration-300;
+  }
+
+  .work-item:hover .work-image {
+    @apply scale-110;
+  }
+
+  .work-item:hover .work-overlay {
+    @apply opacity-100;
+  }
+
+  .work-item:hover .work-content {
+    @apply translate-y-0;
   }
 }
 

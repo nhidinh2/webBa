@@ -1,20 +1,31 @@
 import React from 'react';
+import Hero from '../components/Hero';
+import ReadySection from '../components/ReadySection';
+import VideoSection from '../components/VideoSection';
+import WorkShowcase from '../components/WorkShowcase';
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Welcome to Our App</h1>
-      <div className="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="p-6">
-          <p className="text-gray-700 mb-4">
-            This is the home page of our application. Feel free to explore using the navigation links.
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-            Get Started
-          </button>
-        </div>
+    <main className="min-h-screen pt-20 relative">
+      {/* Dark overlay background */}
+      <div 
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10">
+        <Hero />
+        <ReadySection />
+        <VideoSection />
+        <WorkShowcase />
       </div>
-    </div>
+    </main>
   );
 };
 

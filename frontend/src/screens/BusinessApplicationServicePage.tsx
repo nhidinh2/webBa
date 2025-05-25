@@ -21,7 +21,7 @@ const BusinessApplicationServicePage: React.FC = () => {
       {/* Hero Banner */}
       <div className="relative h-[60vh] w-full flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1500&q=80"
+          src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="Business Application Service Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -33,7 +33,7 @@ const BusinessApplicationServicePage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {isEn ? 'Business Application' : 'Ứng Dụng Doanh Nghiệp'}
+            {isEn ? 'Business Application' : 'Ứng dụng doanh nghiệp'}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -79,12 +79,12 @@ const BusinessApplicationServicePage: React.FC = () => {
           >
             <h2 className="text-3xl font-bold mb-6">
               {isEn ? 'Business Application Solutions' : 'Giải Pháp Ứng Dụng Doanh Nghiệp'}
-          </h2>
+            </h2>
             <div className="h-1 w-20 bg-primary mb-8"></div>
             <p className="text-gray-600 mb-8 leading-relaxed">
               {isEn 
-                ? "We develop and implement custom business applications that streamline operations, enhance productivity, and drive digital transformation for organizations of all sizes."
-                : "Chúng tôi phát triển và triển khai các ứng dụng doanh nghiệp tùy chỉnh giúp tối ưu hóa hoạt động, nâng cao năng suất và thúc đẩy chuyển đổi số cho các tổ chức."}
+                ? "We develop and implement cutting-edge business applications that streamline operations, enhance productivity, and drive digital transformation across your organization."
+                : "Chúng tôi phát triển và triển khai các ứng dụng doanh nghiệp tiên tiến giúp tối ưu hóa hoạt động, nâng cao năng suất và thúc đẩy chuyển đổi số trong tổ chức của bạn."}
             </p>
           </motion.div>
 
@@ -94,70 +94,70 @@ const BusinessApplicationServicePage: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-4">
-              {isEn ? 'Our Solutions' : 'Giải Pháp Của Chúng Tôi'}
+              {isEn ? 'Our Business Solutions' : 'Giải Pháp Kinh Doanh Của Chúng Tôi'}
             </h3>
             <div className="space-y-6">
-            {isEn ? (
-              <>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Enterprise Resource Planning (ERP)</h4>
-                    <p className="text-gray-600">Comprehensive ERP solutions that integrate all aspects of your business operations, from finance and HR to inventory and customer relations.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Customer Relationship Management (CRM)</h4>
-                    <p className="text-gray-600">Advanced CRM systems to manage customer interactions, improve customer service, and drive sales growth.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Business Intelligence (BI)</h4>
-                    <p className="text-gray-600">Data analytics and visualization tools that transform raw data into actionable insights for better decision-making.</p>
-                  </motion.div>
-              </>
-            ) : (
-              <>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Hoạch định Nguồn lực Doanh nghiệp (ERP)</h4>
-                    <p className="text-gray-600">Giải pháp ERP toàn diện tích hợp mọi khía cạnh hoạt động kinh doanh, từ tài chính và nhân sự đến kho bãi và quan hệ khách hàng.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Quản lý Quan hệ Khách hàng (CRM)</h4>
-                    <p className="text-gray-600">Hệ thống CRM tiên tiến để quản lý tương tác khách hàng, cải thiện dịch vụ và thúc đẩy tăng trưởng doanh số.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Phân tích Thông minh (BI)</h4>
-                    <p className="text-gray-600">Công cụ phân tích và trực quan hóa dữ liệu, chuyển đổi dữ liệu thô thành thông tin hữu ích cho việc ra quyết định.</p>
-                  </motion.div>
-              </>
-            )}
+              {isEn ? (
+                <>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Enterprise Resource Planning (ERP)</h4>
+                  <p className="text-gray-600">Comprehensive ERP solutions that integrate and manage core business processes, from finance and HR to supply chain and customer relations.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Customer Relationship Management (CRM)</h4>
+                  <p className="text-gray-600">Advanced CRM systems to manage customer interactions, improve customer service, and drive sales growth through better relationship management.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Business Intelligence & Analytics</h4>
+                  <p className="text-gray-600">Data-driven insights and analytics tools to help businesses make informed decisions and identify growth opportunities.</p>
+                </motion.div>
+                </>
+              ) : (
+                <>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Hoạch định Nguồn lực Doanh nghiệp (ERP)</h4>
+                  <p className="text-gray-600">Giải pháp ERP toàn diện tích hợp và quản lý các quy trình kinh doanh cốt lõi, từ tài chính và nhân sự đến chuỗi cung ứng và quan hệ khách hàng.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Quản lý Quan hệ Khách hàng (CRM)</h4>
+                  <p className="text-gray-600">Hệ thống CRM tiên tiến để quản lý tương tác khách hàng, cải thiện dịch vụ khách hàng và thúc đẩy tăng trưởng doanh số thông qua quản lý quan hệ tốt hơn.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Phân tích & Thông tin Kinh doanh</h4>
+                  <p className="text-gray-600">Công cụ phân tích và thông tin chi tiết dựa trên dữ liệu giúp doanh nghiệp đưa ra quyết định sáng suốt và xác định cơ hội tăng trưởng.</p>
+                </motion.div>
+                </>
+              )}
             </div>
           </motion.div>
         </div>
@@ -171,11 +171,11 @@ const BusinessApplicationServicePage: React.FC = () => {
         >
           {/* All Services List */}
           <div className="space-y-6">
-          <div className="bg-gray-50 rounded-xl shadow p-6">
-            <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">
-              {isEn ? 'All Services' : 'Tất cả dịch vụ'}
-            </h4>
-            <ul className="space-y-2">
+            <div className="bg-gray-50 rounded-xl shadow p-6">
+              <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">
+                {isEn ? 'All Services' : 'Tất cả dịch vụ'}
+              </h4>
+              <ul className="space-y-2">
                 {services.map((service, index) => (
                   <motion.li 
                     key={typeof service.name === 'string' ? service.name : service.name.en}
@@ -183,20 +183,20 @@ const BusinessApplicationServicePage: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: 0.1 * index }}
                   >
-                  <Link
-                    to={service.path}
-                    className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors font-medium text-gray-700 hover:bg-primary/10 hover:text-primary ${
-                      (typeof service.name === 'string' ? service.name : service.name.en) === 'Business Application' 
-                        ? 'bg-primary/10 text-primary border-l-4 border-primary' 
-                        : ''
-                    }`}
-                  >
-                    {typeof service.name === 'string' ? service.name : isEn ? service.name.en : service.name.vi}
-                    <FiChevronRight className="ml-2" />
-                  </Link>
+                    <Link
+                      to={service.path}
+                      className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors font-medium text-gray-700 hover:bg-primary/10 hover:text-primary ${
+                        (typeof service.name === 'string' ? service.name : service.name.en) === 'Business Application' 
+                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
+                          : ''
+                      }`}
+                    >
+                      {typeof service.name === 'string' ? service.name : isEn ? service.name.en : service.name.vi}
+                      <FiChevronRight className="ml-2" />
+                    </Link>
                   </motion.li>
-              ))}
-            </ul>
+                ))}
+              </ul>
             </div>
 
             {/* Need Consultation Section */}

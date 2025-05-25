@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             <div className="bg-white rounded-xl shadow-xl p-8 flex flex-col md:flex-row items-center justify-between">
               <div className="mb-6 md:mb-0 md:mr-8 flex-1">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  {currentLanguage === 'vi' ? 'Cập nhật tin tức từ IERP' : 'Stay Updated with IERP'}
+                  {currentLanguage === 'vi' ? 'Cập nhật tin tức từ NetCorp' : 'Stay Updated with NetCorp'}
                 </h3>
                 <p className="text-gray-600">
                   {currentLanguage === 'vi' 
@@ -168,8 +168,8 @@ const Footer: React.FC = () => {
                   <div className="ml-4">
                     <p className="text-gray-400">
                       {currentLanguage === 'vi' 
-                        ? '123 Đường Công nghệ, Quận 1, TP. Hồ Chí Minh, Việt Nam'
-                        : '123 Tech Street, District 1, Ho Chi Minh City, Vietnam'}
+                        ? 'Tòa nhà Casla, Ngõ 78 Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội'
+                        : 'Casla Building, 78 Duy Tan Alley, Dich Vong Hau, Cau Giay, Hanoi'}
                     </p>
                   </div>
                 </li>
@@ -180,7 +180,7 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <p className="text-gray-400">+84 (28) 1234-5678</p>
+                    <p className="text-gray-400">+84 71296820</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -190,7 +190,7 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <p className="text-gray-400">info@ierp.vn</p>
+                    <p className="text-gray-400">info@netsys.com.vn</p>
                   </div>
                 </li>
               </ul>
@@ -203,7 +203,7 @@ const Footer: React.FC = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 mb-4 md:mb-0">
-              © {currentYear} IERP. {currentLanguage === 'vi' ? 'Đã đăng ký bản quyền.' : 'All Rights Reserved.'}
+              © {currentYear} NetCorp. {currentLanguage === 'vi' ? 'Đã đăng ký bản quyền.' : 'All Rights Reserved.'}
             </p>
             <div className="flex flex-wrap justify-center space-x-6">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">

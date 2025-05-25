@@ -127,30 +127,8 @@ const Contact: React.FC = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="relative py-12 bg-white z-10">
+      <div className="relative py-0 bg-white z-10 mt-16">
         <div className="container mx-auto px-4">
-          {/* Section Heading */}
-          <motion.div 
-            className="flex flex-col items-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-              {isEn ? (
-                <>
-                  <span className="text-primary">Netcorp</span>{' '}
-                  <span>Corporation</span>
-                </>
-              ) : (
-                <>
-                  <span className="text-primary">Tập Đoàn</span>{' '}
-                  <span>Netcorp</span>
-                </>
-              )}
-            </h2>
-          </motion.div>
-
           {/* Info Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
             {contactCards.map((card, idx) => (
@@ -249,6 +227,13 @@ const Contact: React.FC = () => {
             </form>
           </motion.div>
         </div>
+        
+        {/* Background Elements */}
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/10 -mb-48 -mr-48 transform rotate-45"></div>
+        <div className="absolute top-1/2 left-0 w-72 h-72 bg-primary/5 -ml-36 rounded-full filter blur-3xl"></div>
+        
+        {/* Spacing before footer */}
+        <div className="h-16"></div>
       </div>
     </div>
   );

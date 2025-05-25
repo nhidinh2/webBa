@@ -21,7 +21,7 @@ const MeServicePage: React.FC = () => {
       {/* Hero Banner */}
       <div className="relative h-[60vh] w-full flex items-center justify-center">
         <img
-          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+          src="https://images.unsplash.com/photo-1601524909162-ae8725290836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="M&E Service Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -33,7 +33,7 @@ const MeServicePage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            {isEn ? 'Monitoring & Evaluation' : 'Giám Sát & Đánh Giá'}
+            M&E
           </motion.h1>
           <motion.div
             initial={{ opacity: 0 }}
@@ -78,13 +78,13 @@ const MeServicePage: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-bold mb-6">
-              {isEn ? 'Monitoring & Evaluation Solutions' : 'Giải Pháp Giám Sát & Đánh Giá'}
+              {isEn ? 'Mechanical & Electrical Solutions' : 'Giải Pháp Cơ Điện'}
             </h2>
             <div className="h-1 w-20 bg-primary mb-8"></div>
             <p className="text-gray-600 mb-8 leading-relaxed">
               {isEn 
-                ? "Our comprehensive M&E solutions help organizations track, measure, and improve their project performance through data-driven insights and systematic evaluation."
-                : "Giải pháp M&E toàn diện của chúng tôi giúp tổ chức theo dõi, đo lường và cải thiện hiệu suất dự án thông qua phân tích dữ liệu và đánh giá có hệ thống."}
+                ? "We provide comprehensive Mechanical and Electrical engineering solutions that ensure optimal performance, safety, and efficiency for buildings and industrial facilities."
+                : "Chúng tôi cung cấp giải pháp kỹ thuật Cơ Điện toàn diện đảm bảo hiệu suất, an toàn và hiệu quả tối ưu cho các tòa nhà và cơ sở công nghiệp."}
             </p>
           </motion.div>
 
@@ -94,68 +94,68 @@ const MeServicePage: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold mb-4">
-              {isEn ? 'Our M&E Services' : 'Dịch Vụ M&E Của Chúng Tôi'}
+              {isEn ? 'Our M&E Solutions' : 'Giải Pháp M&E Của Chúng Tôi'}
             </h3>
             <div className="space-y-6">
               {isEn ? (
                 <>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Project Monitoring Systems</h4>
-                    <p className="text-gray-600">Real-time monitoring solutions that track project progress, resource utilization, and performance indicators to ensure project success.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Impact Evaluation</h4>
-                    <p className="text-gray-600">Comprehensive evaluation frameworks to assess project outcomes, measure impact, and identify areas for improvement.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Data Analytics & Reporting</h4>
-                    <p className="text-gray-600">Advanced analytics tools and customized reporting solutions to transform monitoring data into actionable insights.</p>
-                  </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">HVAC Systems</h4>
+                  <p className="text-gray-600">Advanced heating, ventilation, and air conditioning solutions designed for optimal comfort and energy efficiency in commercial and industrial spaces.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Electrical Systems</h4>
+                  <p className="text-gray-600">Comprehensive electrical infrastructure solutions including power distribution, lighting systems, and emergency power systems.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Building Automation</h4>
+                  <p className="text-gray-600">Smart building management systems that integrate and control various mechanical and electrical systems for optimal performance and energy efficiency.</p>
+                </motion.div>
                 </>
               ) : (
                 <>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Hệ thống Giám sát Dự án</h4>
-                    <p className="text-gray-600">Giải pháp giám sát thời gian thực theo dõi tiến độ dự án, sử dụng tài nguyên và các chỉ số hiệu suất để đảm bảo thành công của dự án.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Đánh giá Tác động</h4>
-                    <p className="text-gray-600">Khung đánh giá toàn diện để đánh giá kết quả dự án, đo lường tác động và xác định các lĩnh vực cần cải thiện.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Phân tích & Báo cáo Dữ liệu</h4>
-                    <p className="text-gray-600">Công cụ phân tích nâng cao và giải pháp báo cáo tùy chỉnh để chuyển đổi dữ liệu giám sát thành thông tin hữu ích.</p>
-                  </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Hệ thống HVAC</h4>
+                  <p className="text-gray-600">Giải pháp sưởi ấm, thông gió và điều hòa không khí tiên tiến được thiết kế để tối ưu hóa sự thoải mái và hiệu quả năng lượng trong không gian thương mại và công nghiệp.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Hệ thống Điện</h4>
+                  <p className="text-gray-600">Giải pháp cơ sở hạ tầng điện toàn diện bao gồm phân phối điện, hệ thống chiếu sáng và hệ thống điện khẩn cấp.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Tự động hóa Tòa nhà</h4>
+                  <p className="text-gray-600">Hệ thống quản lý tòa nhà thông minh tích hợp và điều khiển các hệ thống cơ điện khác nhau để đạt hiệu suất và hiệu quả năng lượng tối ưu.</p>
+                </motion.div>
                 </>
               )}
             </div>

@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlay, FiCheck } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 const VideoSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
 
   return (
-    <section className="py-20 bg-gray-50 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 backdrop-blur-sm"></div>
-      <div className="absolute -left-16 -bottom-16 w-64 h-64 bg-primary/10 rounded-full filter blur-xl"></div>
+      <div className="absolute inset-0 bg-black/5"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-black/5 backdrop-blur-sm"></div>
+      <div className="absolute -left-16 -bottom-16 w-64 h-64 bg-black/5 rounded-full filter blur-xl"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
@@ -20,20 +23,22 @@ const VideoSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            Our Approach
+          <div className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-sm font-medium mb-4">
+            {currentLanguage === 'vi' ? 'Phương pháp của chúng tôi' : 'Our Approach'}
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            See How We Transform IT Challenges
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            {currentLanguage === 'vi' ? 'Khám phá cách chúng tôi giải quyết thách thức trong lĩnh vực CNTT' : 'See How We Transform IT Challenges'}
           </h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
-          <p className="text-gray-600">
-            Watch how NetCorp delivers innovative technology solutions that drive business success for our clients across Vietnam.
+          <p className="text-gray-200">
+            {currentLanguage === 'vi' 
+              ? 'Hãy xem NetCorp mang đến các giải pháp công nghệ đổi mới như thế nào, góp phần thúc đẩy thành công kinh doanh cho khách hàng trên toàn Việt Nam.'
+              : 'Watch how NetCorp delivers innovative technology solutions that drive business success for our clients across Vietnam.'}
           </p>
         </motion.div>
         
         <div className="relative rounded-xl overflow-hidden shadow-2xl">
-          <div className="aspect-video">
+          <div className="aspect-[16/7]">
             <img 
               src="https://source.unsplash.com/random/1200x800/?technology,business" 
               alt="NetCorp Technology Solutions" 
@@ -49,30 +54,32 @@ const VideoSection: React.FC = () => {
           >
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="w-20 h-20 flex items-center justify-center bg-primary rounded-full text-white shadow-lg hover:bg-white hover:text-primary transition-all duration-300 group"
+              className="w-16 h-16 flex items-center justify-center bg-primary rounded-full text-white shadow-lg hover:bg-white hover:text-primary transition-all duration-300 group"
             >
-              <FiPlay size={30} className="group-hover:scale-110 transition-transform" />
+              <FiPlay size={24} className="group-hover:scale-110 transition-transform" />
             </button>
           </motion.div>
           
           <motion.div 
-            className="absolute right-0 top-0 w-full md:w-2/5 h-full md:bg-gradient-to-l from-primary/90 to-primary/80 flex flex-col justify-center p-8 md:p-12"
+            className="absolute right-0 top-0 w-full md:w-2/5 h-full md:bg-gradient-to-l from-primary/90 to-primary/80 flex flex-col justify-center p-6 md:p-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
-              Technology Solutions that Drive Business Growth
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
+              {currentLanguage === 'vi' 
+                ? 'Giải pháp công nghệ thúc đẩy tăng trưởng doanh nghiệp'
+                : 'Technology Solutions that Drive Business Growth'}
             </h3>
             
-            <div className="mb-8">
-              <ul className="space-y-3">
+            <div className="mb-6">
+              <ul className="space-y-2">
                 {[
-                  'Custom software development',
-                  'IT infrastructure optimization',
-                  'Cybersecurity solutions',
-                  'Cloud transformation'
+                  currentLanguage === 'vi' ? 'Phát triển phần mềm tùy chỉnh' : 'Custom software development',
+                  currentLanguage === 'vi' ? 'Tối ưu hạ tầng CNTT' : 'IT infrastructure optimization',
+                  currentLanguage === 'vi' ? 'Giải pháp an ninh mạng' : 'Cybersecurity solutions',
+                  currentLanguage === 'vi' ? 'Chuyển đổi nền tảng điện toán đám mây' : 'Cloud transformation'
                 ].map((item, index) => (
                   <motion.li 
                     key={index}
@@ -95,7 +102,7 @@ const VideoSection: React.FC = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Explore Our Services
+              {currentLanguage === 'vi' ? 'Khám phá dịch vụ của chúng tôi' : 'Explore Our Services'}
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
               </svg>

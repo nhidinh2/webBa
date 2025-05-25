@@ -166,7 +166,7 @@ const Services: React.FC = () => {
       </div>
 
       {/* Services Content */}
-      <div className="relative py-12 bg-white z-10 mt-16">
+      <div className="relative py-10 bg-white z-10 mt-16">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div 
             className="max-w-xl mx-auto text-center mb-10"
@@ -176,7 +176,7 @@ const Services: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {currentLanguage === 'vi' ? 'Chúng tôi cung cấp' : 'We are offering'}
+              {currentLanguage === 'vi' ? 'Lĩnh Vực Hoạt Động' : 'What We Do'}
             </h2>
             <div className="h-1 w-20 bg-primary mx-auto mb-4"></div>
           </motion.div>

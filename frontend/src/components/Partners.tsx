@@ -158,7 +158,7 @@ const Partners: React.FC = () => {
       </div>
 
       {/* Partners Content */}
-      <div className="relative bg-white z-10 py-12 mt-8">
+      <div className="relative py-10 bg-white z-10 mt-16">
         <div className="container mx-auto px-4">
           {/* Section Title */}
           <motion.div 

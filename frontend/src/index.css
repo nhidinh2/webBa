@@ -13,12 +13,20 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
   
   body {
     @apply font-sans bg-white text-gray-800;
     min-height: 100vh;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Ensure all images are responsive */
+  img {
+    @apply max-w-full h-auto;
   }
 
   /* Grid background pattern */
@@ -32,11 +40,12 @@
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    min-width: 320px; /* Minimum width for very small devices */
   }
   
   .btn {
-    @apply inline-block px-6 py-3 rounded-md font-medium transition-all duration-300;
+    @apply inline-block px-4 sm:px-6 py-3 rounded-md font-medium transition-all duration-300 whitespace-nowrap;
   }
   
   .btn-primary {
@@ -52,7 +61,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4;
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold mb-4;
   }
   
   .section-divider {
@@ -73,15 +82,17 @@
 
   /* Work Showcase styles */
   .work-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
   }
 
   .work-item {
-    @apply relative overflow-hidden bg-white;
+    @apply relative overflow-hidden bg-white w-full;
   }
 
+  /* Ensure responsive images in grid */
   .work-image {
     @apply w-full h-full object-cover transition-transform duration-700;
+    aspect-ratio: 1 / 1;
   }
 
   .work-overlay {
@@ -102,6 +113,29 @@
 
   .work-item:hover .work-content {
     @apply translate-y-0;
+  }
+
+  /* Ensure buttons don't overflow on mobile */
+  .btn-container {
+    @apply flex flex-wrap gap-2 justify-center sm:justify-start;
+  }
+}
+
+/* Fix for mobile overflow issues */
+@media screen and (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Adjust grid gaps for mobile */
+  .grid {
+    gap: 1rem;
+  }
+  
+  /* Ensure text doesn't overflow */
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
   }
 }
 

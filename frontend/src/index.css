@@ -80,6 +80,31 @@
     @apply text-primary;
   }
 
+  /* Service page styles */
+  .service-hero {
+    @apply relative h-[40vh] sm:h-[50vh] md:h-[60vh] w-full flex items-center justify-center;
+  }
+
+  .service-hero-content {
+    @apply relative z-10 text-center text-white px-4;
+  }
+
+  .service-hero-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 uppercase;
+  }
+
+  .service-content {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 py-12 lg:py-20;
+  }
+
+  .service-main {
+    @apply lg:col-span-2;
+  }
+
+  .service-sidebar {
+    @apply w-full lg:w-auto space-y-8;
+  }
+
   /* Work Showcase styles */
   .work-grid {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
@@ -100,7 +125,7 @@
   }
 
   .work-content {
-    @apply text-center text-white transform translate-y-4 transition-transform duration-300;
+    @apply text-center text-white transform translate-y-4 transition-transform duration-300 px-4;
   }
 
   .work-item:hover .work-image {
@@ -136,6 +161,26 @@
   /* Ensure text doesn't overflow */
   h1, h2, h3, h4, h5, h6 {
     word-wrap: break-word;
+    @apply tracking-tight;
+  }
+
+  /* Improve mobile text readability */
+  p {
+    @apply text-sm leading-relaxed;
+  }
+
+  /* Adjust service page spacing */
+  .service-content {
+    @apply py-8;
+  }
+
+  .service-hero {
+    @apply min-h-[300px];
+  }
+
+  /* Adjust mobile navigation */
+  .nav-link {
+    @apply py-3;
   }
 }
 

@@ -19,16 +19,16 @@ const IctServicePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Banner */}
-      <div className="relative h-[60vh] w-full flex items-center justify-center">
+      <div className="service-hero">
         <img
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
           alt="ICT Service Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 text-center text-white">
+        <div className="service-hero-content">
           <motion.h1 
-            className="text-4xl md:text-6xl font-bold mb-4 uppercase"
+            className="service-hero-title"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -69,34 +69,28 @@ const IctServicePage: React.FC = () => {
       </div>
 
       {/* Main Content Section */}
-      <div className="container mx-auto px-4 py-16 flex flex-col lg:flex-row gap-8">
-        {/* Content */}
-        <div className="flex-1">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold mb-6">
-              {isEn ? 'ICT Solutions' : 'Giải Pháp ICT'}
-            </h2>
-            <div className="h-1 w-20 bg-primary mb-8"></div>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              {isEn 
-                ? "We deliver cutting-edge Information and Communication Technology solutions that empower businesses to thrive in the digital age through innovative infrastructure, security, and networking services."
-                : "Chúng tôi cung cấp giải pháp Công nghệ Thông tin và Truyền thông tiên tiến giúp doanh nghiệp phát triển mạnh mẽ trong kỷ nguyên số thông qua các dịch vụ cơ sở hạ tầng, bảo mật và mạng đổi mới."}
-            </p>
-          </motion.div>
+      <div className="container mx-auto px-4">
+        <div className="service-content">
+          {/* Main Content */}
+          <div className="service-main">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+                {isEn ? 'Information and Communication Technology Solutions' : 'Giải Pháp Công Nghệ Thông Tin và Truyền Thông'}
+              </h2>
+              <div className="prose prose-lg max-w-none">
+                <p className="text-gray-600 mb-8">
+                  {isEn 
+                    ? 'We provide comprehensive ICT solutions that help businesses transform digitally and stay competitive in the modern marketplace.'
+                    : 'Chúng tôi cung cấp giải pháp CNTT toàn diện giúp doanh nghiệp chuyển đổi số và duy trì khả năng cạnh tranh trong thị trường hiện đại.'}
+                </p>
+              </div>
+            </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <h3 className="text-2xl font-bold mb-4">
-              {isEn ? 'Our ICT Solutions' : 'Giải Pháp ICT Của Chúng Tôi'}
-            </h3>
-            <div className="space-y-6">
+            <div className="space-y-8">
               {isEn ? (
                 <>
                 <motion.div 
@@ -106,7 +100,7 @@ const IctServicePage: React.FC = () => {
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
                   <h4 className="text-xl font-bold mb-2">Network Infrastructure</h4>
-                  <p className="text-gray-600">Comprehensive networking solutions including design, implementation, and maintenance of enterprise-grade networks, ensuring optimal performance and reliability.</p>
+                  <p className="text-gray-600">Design and implementation of secure, scalable network solutions for enterprise environments.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-gray-50 p-6 rounded-lg"
@@ -114,17 +108,8 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Cybersecurity Services</h4>
-                  <p className="text-gray-600">Advanced security solutions to protect your digital assets, including threat detection, prevention, and response capabilities.</p>
-                </motion.div>
-                <motion.div 
-                  className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 }}
-                >
                   <h4 className="text-xl font-bold mb-2">Cloud Solutions</h4>
-                  <p className="text-gray-600">Scalable cloud infrastructure and services that enable digital transformation and business agility.</p>
+                  <p className="text-gray-600">Scalable cloud infrastructure and services enabling digital transformation and business agility.</p>
                 </motion.div>
                 </>
               ) : (
@@ -135,8 +120,8 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Cơ sở Hạ tầng Mạng</h4>
-                  <p className="text-gray-600">Giải pháp mạng toàn diện bao gồm thiết kế, triển khai và bảo trì mạng cấp doanh nghiệp, đảm bảo hiệu suất và độ tin cậy tối ưu.</p>
+                  <h4 className="text-xl font-bold mb-2">Hạ tầng Mạng</h4>
+                  <p className="text-gray-600">Thiết kế và triển khai giải pháp mạng an toàn, có khả năng mở rộng cho môi trường doanh nghiệp.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-gray-50 p-6 rounded-lg"
@@ -144,62 +129,45 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Dịch vụ An ninh mạng</h4>
-                  <p className="text-gray-600">Giải pháp bảo mật tiên tiến để bảo vệ tài sản số của bạn, bao gồm khả năng phát hiện, ngăn chặn và phản ứng với các mối đe dọa.</p>
-                </motion.div>
-                <motion.div 
-                  className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 }}
-                >
                   <h4 className="text-xl font-bold mb-2">Giải pháp Đám mây</h4>
                   <p className="text-gray-600">Cơ sở hạ tầng và dịch vụ đám mây có khả năng mở rộng cho phép chuyển đổi số và linh hoạt trong kinh doanh.</p>
                 </motion.div>
                 </>
               )}
             </div>
-          </motion.div>
-        </div>
+          </div>
 
-        {/* Sidebar */}
-        <motion.aside 
-          className="w-full lg:w-80 flex-shrink-0"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          {/* All Services List */}
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-xl shadow p-6">
-              <h4 className="text-lg font-bold mb-4 uppercase tracking-wider">
-                {isEn ? 'All Services' : 'Tất cả dịch vụ'}
-              </h4>
+          {/* Sidebar */}
+          <motion.aside 
+            className="service-sidebar"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* All Services List */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold mb-4">
+                {isEn ? 'Our Services' : 'Dịch Vụ Của Chúng Tôi'}
+              </h3>
               <ul className="space-y-2">
-                {services.map((service, index) => (
-                  <motion.li 
-                    key={typeof service.name === 'string' ? service.name : service.name.en}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: 0.1 * index }}
-                  >
+                {services.map((service) => (
+                  <li key={service.path}>
                     <Link
                       to={service.path}
-                      className={`flex items-center justify-between px-4 py-2 rounded-md transition-colors font-medium text-gray-700 hover:bg-primary/10 hover:text-primary ${
-                        (typeof service.name === 'string' ? service.name : service.name.en) === 'ICT' 
-                          ? 'bg-primary/10 text-primary border-l-4 border-primary' 
-                          : ''
+                      className={`block py-2 px-3 rounded transition-colors duration-200 ${
+                        location.pathname === service.path
+                          ? 'bg-primary/10 text-primary'
+                          : 'hover:bg-gray-100'
                       }`}
                     >
-                      {typeof service.name === 'string' ? service.name : isEn ? service.name.en : service.name.vi}
-                      <FiChevronRight className="ml-2" />
+                      {isEn ? service.name.en : service.name.vi}
                     </Link>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
             </div>
 
-            {/* Need Consultation Section */}
+            {/* Contact Box */}
             <motion.div 
               className="bg-primary/10 rounded-xl shadow p-6"
               initial={{ opacity: 0, y: 20 }}
@@ -229,8 +197,8 @@ const IctServicePage: React.FC = () => {
                 <FiChevronRight className="ml-2" />
               </motion.a>
             </motion.div>
-          </div>
-        </motion.aside>
+          </motion.aside>
+        </div>
       </div>
     </div>
   );

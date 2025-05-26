@@ -11,36 +11,36 @@ const Hero: React.FC = () => {
     
       {/* Main content */}
       <div className="container mx-auto px-4 h-full flex items-center relative z-20">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <motion.div 
-            className="text-white lg:col-span-8"
+            className="text-white lg:col-span-8 text-center lg:text-left"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
               {currentLanguage === 'vi' ? (
                 <>
                   THƯƠNG HIỆU DẪN ĐẦU
-                  <div className="h-4"></div>
+                  <div className="h-2 lg:h-4"></div>
                   GIẢI PHÁP TỐI ƯU
                 </>
               ) : (
                 <>
                   LEADING BRANDS
-                  <div className="h-4"></div>
+                  <div className="h-2 lg:h-4"></div>
                   OPTIMAL SOLUTIONS
                 </>
               )}
             </h1>
-            <p className="text-lg mb-8 text-white/90 max-w-lg">
+            <p className="text-base sm:text-lg mb-6 lg:mb-8 text-white/90 max-w-lg mx-auto lg:mx-0">
               {currentLanguage === 'vi' 
                 ? "Chúng tôi phân phối các thương hiệu công nghệ hàng đầu nhằm mang đến những giải pháp tối ưu và hiệu quả nhất cho khách hàng."
                 : "We distribute leading technology brands to deliver the most optimal and effective solutions to our clients."
               }
             </p>
             <motion.button
-              className="px-8 py-4 bg-emerald-600 text-white rounded-md font-semibold text-lg hover:bg-emerald-700 transition-colors duration-300"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-600 text-white rounded-md font-semibold text-base sm:text-lg hover:bg-emerald-700 transition-colors duration-300 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
           </motion.div>
 
           <motion.div 
-            className="relative lg:col-span-4"
+            className="relative lg:col-span-4 hidden lg:block"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}

@@ -157,20 +157,19 @@ const Navbar: React.FC = () => {
         {/* Mobile Menu */}
         {mobileMenuOpen && (
           <motion.div 
-            className="md:hidden bg-darker py-4 border-t border-gray-800"
+            className="md:hidden fixed top-[60px] left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-gray-800 max-h-[calc(100vh-60px)] overflow-y-auto"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="container mx-auto px-4 flex flex-col space-y-3">
-              {/* Regular nav items */}
+            <div className="container mx-auto py-4 px-4 flex flex-col space-y-3">
               {navItems.map((item) => (
                 item.path === '/services' ? (
-                  <div key={item.path}>
+                  <div key={item.path} className="border-b border-gray-800/50 pb-2">
                     <Link 
                       to={item.path}
-                      className={`px-4 py-3 font-medium rounded-md flex justify-between items-center transition-colors duration-200 ${
+                      className={`block px-4 py-3 font-medium rounded-md transition-colors duration-200 ${
                         location.pathname === '/services'
                           ? 'text-primary' 
                           : 'text-white hover:text-primary hover:bg-gray-800/30'
@@ -201,7 +200,7 @@ const Navbar: React.FC = () => {
                   <Link 
                     key={item.path}
                     to={item.path} 
-                    className={`px-4 py-3 font-medium rounded-md flex justify-between items-center transition-colors duration-200 ${
+                    className={`block px-4 py-3 font-medium rounded-md transition-colors duration-200 ${
                       isActive(item.path) 
                         ? 'text-primary' 
                         : 'text-white hover:text-primary hover:bg-gray-800/30'
@@ -209,13 +208,10 @@ const Navbar: React.FC = () => {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                    {isActive(item.path) && (
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                    )}
                   </Link>
                 )
               ))}
-              <div className="pt-3 mt-2 border-t border-gray-800 flex justify-between items-center">
+              <div className="pt-3 mt-2 border-t border-gray-800/50 flex justify-between items-center">
                 <LanguageSwitcher />
               </div>
             </div>

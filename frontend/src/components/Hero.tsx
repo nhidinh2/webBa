@@ -118,7 +118,7 @@ const Hero: React.FC = () => {
                       {currentLanguage === 'vi' ? 'Đối Tác Tin Cậy' : 'Trusted Partner'}
                     </div>
                     <div className="text-sm text-gray-600">
-                      {currentLanguage === 'vi' ? 'Từ Năm 2008' : 'Since 2008'}
+                      {currentLanguage === 'vi' ? 'Từ Năm 2005' : 'Since 2005'}
                     </div>
                   </div>
                 </div>

@@ -18,12 +18,12 @@ const About: React.FC = () => {
 
   const tabContent = {
     humanResource: {
-      en: "We are proud of our staffs, technology experts with experience accrued from hundreds of projects in nearly 17 years, many large customers have appreciated for our competence and professional qualifications. Our experts always try the best with the mission bringing Best Products – Best Solutions – Best service as customer demand currently and in the future. We accompany closely with customers in building technology-oriented strategy, developing product, service and commitment to optimization more value for customer. Besides, with the expanding of business scope, we have been building the system of recruitment and professional training to meet the needs of Group as well as customers.",
-      vi: "Chúng tôi tự hào với đội ngũ nhân viên và chuyên gia công nghệ có kinh nghiệm từ hàng trăm dự án trong gần 17 năm qua. Nhiều khách hàng lớn đã đánh giá cao năng lực và trình độ chuyên môn của chúng tôi. Các chuyên gia của chúng tôi luôn nỗ lực mang đến Sản phẩm – Giải pháp – Dịch vụ tốt nhất theo nhu cầu khách hàng hiện tại và tương lai.\n\nChúng tôi luôn đồng hành cùng khách hàng trong việc xây dựng chiến lược công nghệ, phát triển sản phẩm, dịch vụ và cam kết tối ưu hóa giá trị cho khách hàng. Với quy mô ngày càng mở rộng, chúng tôi đang xây dựng hệ thống tuyển dụng và đào tạo chuyên nghiệp để đáp ứng nhu cầu của doanh nghiệp và khách hàng.",
+      en: "We are proud of our staffs, technology experts with experience accrued from hundreds of projects in nearly 20 years, many large customers have appreciated for our competence and professional qualifications. Our experts always try the best with the mission bringing Best Products – Best Solutions – Best Service as customer demand currently and in the future. We accompany closely with customers in building technology-oriented strategy, developing product, service and commitment to optimization more value for customer. Besides, with the expanding of business scope, we have been building the system of recruitment and professional training to meet the needs of Group as well as customers.",
+      vi: "Chúng tôi tự hào với đội ngũ nhân viên và chuyên gia công nghệ có kinh nghiệm từ hàng trăm dự án trong gần 20 năm qua. Nhiều khách hàng lớn đã đánh giá cao năng lực và trình độ chuyên môn của chúng tôi. Các chuyên gia của chúng tôi luôn nỗ lực mang đến Sản phẩm – Giải pháp – Dịch vụ tốt nhất theo nhu cầu khách hàng hiện tại và tương lai.\n\nChúng tôi luôn đồng hành cùng khách hàng trong việc xây dựng chiến lược công nghệ, phát triển sản phẩm, dịch vụ và cam kết tối ưu hóa giá trị cho khách hàng. Với quy mô ngày càng mở rộng, chúng tôi đang xây dựng hệ thống tuyển dụng và đào tạo chuyên nghiệp để đáp ứng nhu cầu của doanh nghiệp và khách hàng.",
       image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dGVhbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
     visionMission: {
-      en: "Netcorp Corporation's vision is to become one of the leading solution supplier of ICT, Electronics, Industrial sector in Vietnam. We have been creating our own values by building a network among customers, partners and manufacturers as well as enhancing capabilities and seting higher and higher goals to achieve and satisfy customer.",
+      en: "Netcorp Corporation's vision is to become one of the leading solution supplier of ICT, Electronics, Industrial sector in Vietnam. We have been creating our own values by building a network among customers, partners and manufacturers as well as enhancing capabilities and setting higher and higher goals to achieve and satisfy customers.",
       vi: "Tầm nhìn của Netcorp Corporation là trở thành một trong những nhà cung cấp giải pháp hàng đầu trong lĩnh vực CNTT, Điện tử và Công nghiệp tại Việt Nam. Chúng tôi tạo nên giá trị riêng bằng cách xây dựng mạng lưới kết nối giữa khách hàng, đối tác và nhà sản xuất, đồng thời không ngừng nâng cao năng lực và đặt ra những mục tiêu cao hơn để đạt được sự hài lòng của khách hàng.",
       image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
     },
@@ -138,8 +138,8 @@ const About: React.FC = () => {
               </h2>
               <p className="text-gray-600 text-sm leading-relaxed mb-6">
                 {currentLanguage === 'vi' 
-                  ? "Tập đoàn NETCORP bao gồm 2 công ty Netsys và iERP"
-                  : "NetCorp Corporation includes 2 companies Netsys and iERP"}
+                  ? "Tập đoàn NETCORP bao gồm 2 công ty NetCorp và iERP"
+                  : "NetCorp Corporation includes 2 companies NetCorp and iERP"}
               </p>
               <div className="grid grid-cols-1 gap-8">
                 <motion.div

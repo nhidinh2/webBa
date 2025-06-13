@@ -12,11 +12,10 @@ const Contact: React.FC = () => {
     ? [
         {
           icon: <FiHome size={32} className="text-primary mb-2" />,
-          title: 'Contact information',
+          title: 'Address',
           content: (
             <>
-              <div>142 Le Duan Street, Khâm Thiên Ward, Dong Da District, Hanoi City.</div>
-              <div>Warranty and Technical Support Center - Casla Building, 78 Duy Tan Alley, Dich Vong Hau, Cau Giay, Hanoi.</div>
+              <div>Casla Building, 78 Duy Tan Alley, Dich Vong Hau, Cau Giay, Hanoi.</div>
             </>
           ),
         },
@@ -25,8 +24,8 @@ const Contact: React.FC = () => {
           title: 'Sales Department',
           content: (
             <>
-              <div> Email: info@netsys.com.vn</div>
-              <div> Hotline: 0971.296.820</div>
+              <div> Email: info@netcorp.vn</div>
+              <div> Hotline: 024.7770.1912</div>
             </>
           ),
         },
@@ -35,8 +34,7 @@ const Contact: React.FC = () => {
           title: 'Technical Department',
           content: (
             <>
-              <div> Email: hien.le@netsys.com.vn</div>
-              <div> Hotline: 0974.477.423</div>
+              <div> Email: nis@netcorp.vn</div>
             </>
           ),
         },
@@ -44,11 +42,10 @@ const Contact: React.FC = () => {
     : [
         {
           icon: <FiHome size={32} className="text-primary mb-2" />,
-          title: 'Liên hệ',
+          title: 'Địa chỉ',
           content: (
             <>
-              <div>Số 142, Đường Lê Duẩn, Phường Khâm Thiên, Quận Đống Đa, Thành phố Hà Nội.</div>
-              <div>Trung tâm Bảo hành và Hỗ trợ kỹ thuật - Tòa nhà Casla, Ngõ 78 Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội.</div>
+              <div>Tòa nhà Casla, Ngõ 78 Duy Tân, Dịch Vọng Hậu, Cầu Giấy, Hà Nội.</div>
             </>
           ),
         },
@@ -57,8 +54,8 @@ const Contact: React.FC = () => {
           title: 'Bộ Phận Kinh Doanh',
           content: (
             <>
-              <div> Email: info@netsys.com.vn</div>
-              <div> Hotline: 0971.296.820</div>
+              <div> Email: info@netcorp.vn</div>
+              <div> Hotline: 024.7770.1912</div>
             </>
           ),
         },
@@ -67,8 +64,7 @@ const Contact: React.FC = () => {
           title: 'Bộ Phận Kỹ Thuật',
           content: (
             <>
-              <div> Email: hien.le@netsys.com.vn</div>
-              <div> Hotline: 0974.477.423</div>
+              <div> Email: nis@netcorp.vn</div>
             </>
           ),
         },

@@ -6,8 +6,13 @@
 @tailwind utilities;
 
 :root {
-  --primary: #10B981; /* Emerald-500 from Tailwind */
-  --primary-dark: #059669; /* Emerald-600 from Tailwind */
+  --primary: #C6D92B; /* Updated primary color */
+  --primary-dark: #B3C425; /* Darker shade for hover states */
+  --secondary: #2563EB;
+  --dark: #111827;
+  --darker: #121212;
+  --light: #F9FAFB;
+  --gray-custom: #6B7280;
 }
 
 @layer base {

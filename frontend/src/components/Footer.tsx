@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiMapPin, FiPhone, FiMail, FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiSend, FiArrowRight } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import logoImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -52,13 +53,9 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <Link to="/" className="text-white font-bold text-3xl flex items-center mb-6">
-                <div className="mr-2">
-                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="20" cy="20" r="20" fill="#10B981"/>
-                    <path d="M13 20L18 25L28 15" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                <div className="flex items-center justify-center h-24">
+                  <img src={logoImg} alt="NetCorp Logo" className="h-full w-auto object-contain" />
                 </div>
-                NetCorp
               </Link>
               <p className="text-gray-400 mb-6">
                 {currentLanguage === 'vi'

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Breadcrumb from './Breadcrumb';
+import netcorpImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png';
 
 type TabType = 'humanResource' | 'visionMission' | 'coreValues';
 
@@ -114,8 +115,8 @@ const About: React.FC = () => {
             >
               <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
                 <img
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1771&q=80"
-                  alt="Team Meeting"
+                  src={netcorpImg}
+                  alt="NetCorp Team"
                   className="w-full h-full object-cover"
                 />
                 <div 

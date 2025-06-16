@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
               }
             </p>
             <motion.button
-              className="px-6 sm:px-8 py-3 sm:py-4 bg-emerald-600 text-white rounded-md font-semibold text-base sm:text-lg hover:bg-emerald-700 transition-colors duration-300 w-full sm:w-auto"
+              className="px-6 sm:px-8 py-3 sm:py-4 bg-primary text-white rounded-md font-semibold text-base sm:text-lg hover:bg-primary-dark transition-colors duration-300 w-full sm:w-auto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -85,8 +85,8 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.6, delay: 1.2 }}
               >
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                   </div>
@@ -108,8 +108,8 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.6, delay: 1.4 }}
               >
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-3">
-                    <svg className="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                     </svg>
                   </div>

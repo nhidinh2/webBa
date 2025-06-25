@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiMapPin, FiPhone, FiMail, FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiSend, FiArrowRight } from 'react-icons/fi';
-import { motion } from 'framer-motion';
+import { FiMapPin, FiPhone, FiMail, FiFacebook, FiLinkedin, FiSend, FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import logoImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
   
   return (

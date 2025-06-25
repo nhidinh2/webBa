@@ -15,7 +15,7 @@ interface Partner {
 }
 
 const Partners: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const [activeCategory, setActiveCategory] = useState('all');
 

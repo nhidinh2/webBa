@@ -7,15 +7,7 @@ import netcorpImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png'
 type TabType = 'humanResource' | 'visionMission' | 'coreValues';
 
 const About: React.FC = () => {
-  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>('humanResource');
-
-  const heroContent = {
-    title: {
-      en: "ABOUT US ",
-      vi: "VỀ CHÚNG TÔI"
-    }
-  };
 
   const tabContent = {
     humanResource: {

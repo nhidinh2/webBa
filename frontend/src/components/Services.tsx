@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiServer, FiShield, FiCode, FiGlobe, FiDatabase, FiBriefcase, FiRadio } from 'react-icons/fi';
+import { FiServer, FiCode, FiDatabase, FiRadio } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -20,7 +20,7 @@ interface ServiceCardProps {
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, delay, link }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const [isActive, setIsActive] = useState(false);
 
@@ -58,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
 };
 
 const Services: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
 
   const services = [

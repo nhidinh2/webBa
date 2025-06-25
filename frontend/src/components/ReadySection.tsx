@@ -8,16 +8,6 @@ const ReadySection: React.FC = () => {
 
   return (
     <section className="relative bg-white py-16 z-10 mt-20">
-      {/* Background overlay with slight pattern */}
-      <div 
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px)`,
-          backgroundSize: '20px 20px'
-        }}
-      ></div>
-      
       <div className="container mx-auto px-4 relative z-20">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text Content */}

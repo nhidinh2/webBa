@@ -83,8 +83,8 @@ const BusinessApplicationServicePage: React.FC = () => {
             <div className="h-1 w-20 bg-primary mb-8"></div>
             <p className="text-gray-600 mb-8 leading-relaxed">
               {isEn 
-                ? "We develop and implement cutting-edge business applications that streamline operations, enhance productivity, and drive digital transformation across your organization."
-                : "Chúng tôi phát triển và triển khai các ứng dụng doanh nghiệp tiên tiến giúp tối ưu hóa hoạt động, nâng cao năng suất và thúc đẩy chuyển đổi số trong tổ chức của bạn."}
+                ? "We consult and implement enterprise-wide software systems to improve operational efficiency and decision-making."
+                : "Chúng tôi tư vấn và triển khai hệ thống phần mềm quản lý tổng thể, nâng cao năng lực điều hành doanh nghiệp."}
             </p>
           </motion.div>
 
@@ -93,9 +93,6 @@ const BusinessApplicationServicePage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold mb-4">
-              {isEn ? 'Our Business Solutions' : 'Giải Pháp Kinh Doanh Của Chúng Tôi'}
-            </h3>
             <div className="space-y-6">
               {isEn ? (
                 <>
@@ -105,8 +102,8 @@ const BusinessApplicationServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Enterprise Resource Planning (ERP)</h4>
-                  <p className="text-gray-600">Comprehensive ERP solutions that integrate and manage core business processes, from finance and HR to supply chain and customer relations.</p>
+                  <h4 className="text-xl font-bold mb-2">ERP Solutions (Enterprise Resource Planning)</h4>
+                  <p className="text-gray-600">Integrates core business processes – from finance and human resources to operations – enabling standardized and synchronized management across the enterprise.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-gray-50 p-6 rounded-lg"
@@ -114,17 +111,8 @@ const BusinessApplicationServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Customer Relationship Management (CRM)</h4>
-                  <p className="text-gray-600">Advanced CRM systems to manage customer interactions, improve customer service, and drive sales growth through better relationship management.</p>
-                </motion.div>
-                <motion.div 
-                  className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 }}
-                >
-                  <h4 className="text-xl font-bold mb-2">Business Intelligence & Analytics</h4>
-                  <p className="text-gray-600">Data-driven insights and analytics tools to help businesses make informed decisions and identify growth opportunities.</p>
+                  <h4 className="text-xl font-bold mb-2">SAP HANA Platform</h4>
+                  <p className="text-gray-600">Provides real-time data analytics to support fast, accurate, and agile decision-making in a dynamic business environment.</p>
                 </motion.div>
                 </>
               ) : (
@@ -135,8 +123,8 @@ const BusinessApplicationServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Hoạch định Nguồn lực Doanh nghiệp (ERP)</h4>
-                  <p className="text-gray-600">Giải pháp ERP toàn diện tích hợp và quản lý các quy trình kinh doanh cốt lõi, từ tài chính và nhân sự đến chuỗi cung ứng và quan hệ khách hàng.</p>
+                  <h4 className="text-xl font-bold mb-2">Giải pháp ERP (Hoạch định Nguồn lực Doanh nghiệp)</h4>
+                  <p className="text-gray-600">Tích hợp các quy trình nghiệp vụ từ tài chính, nhân sự, mua hàng đến vận hành – giúp chuẩn hóa và đồng bộ toàn bộ hệ thống doanh nghiệp.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-gray-50 p-6 rounded-lg"
@@ -144,17 +132,8 @@ const BusinessApplicationServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Quản lý Quan hệ Khách hàng (CRM)</h4>
-                  <p className="text-gray-600">Hệ thống CRM tiên tiến để quản lý tương tác khách hàng, cải thiện dịch vụ khách hàng và thúc đẩy tăng trưởng doanh số thông qua quản lý quan hệ tốt hơn.</p>
-                </motion.div>
-                <motion.div 
-                  className="bg-gray-50 p-6 rounded-lg"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 0.5 }}
-                >
-                  <h4 className="text-xl font-bold mb-2">Phân tích & Thông tin Kinh doanh</h4>
-                  <p className="text-gray-600">Công cụ phân tích và thông tin chi tiết dựa trên dữ liệu giúp doanh nghiệp đưa ra quyết định sáng suốt và xác định cơ hội tăng trưởng.</p>
+                  <h4 className="text-xl font-bold mb-2">Nền tảng SAP HANA</h4>
+                  <p className="text-gray-600">Phân tích dữ liệu thời gian thực, hỗ trợ ra quyết định nhanh chóng, chính xác và linh hoạt trong môi trường kinh doanh thay đổi nhanh.</p>
                 </motion.div>
                 </>
               )}

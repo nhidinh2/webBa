@@ -79,15 +79,14 @@ const IctServicePage: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl sm:text-3xl font-bold mb-6">
-                {isEn ? 'Information and Communication Technology Solutions' : 'Giải Pháp Công Nghệ Thông Tin và Truyền Thông'}
+                {isEn ? 'ICT INFRASTRUCTURE' : 'HẠ TẦNG ICT'}
               </h2>
-              <div className="prose prose-lg max-w-none">
-                <p className="text-gray-600 mb-8">
+              <div className="h-1 w-20 bg-primary mb-8"></div>
+                <p className="text-gray-600 mb-8 leading-relaxed">
                   {isEn 
-                    ? 'We provide comprehensive ICT solutions that help businesses transform digitally and stay competitive in the modern marketplace.'
-                    : 'Chúng tôi cung cấp giải pháp CNTT toàn diện giúp doanh nghiệp chuyển đổi số và duy trì khả năng cạnh tranh trong thị trường hiện đại.'}
+                    ? "We provide comprehensive and secure ICT (Information & Communication Technology) foundation solutions with a focus on modernization, efficiency, and integration."
+                    : "Chúng tôi cung cấp giải pháp nền tảng toàn diện cho hệ thống hạ tầng ICT (Công nghệ thông tin & Truyền thông) với tiêu chí hiện đại – đồng bộ – an toàn."}
                 </p>
-              </div>
             </motion.div>
 
             <div className="space-y-8">
@@ -99,8 +98,8 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Network Infrastructure</h4>
-                  <p className="text-gray-600">Design and implementation of secure, scalable network solutions for enterprise environments.</p>
+                  <h4 className="text-xl font-bold mb-2">Server & Storage Systems</h4>
+                  <p className="text-gray-600">High-performance servers and scalable storage solutions to meet growing data and processing needs.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-gray-50 p-6 rounded-lg"
@@ -108,8 +107,44 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Cloud Solutions</h4>
-                  <p className="text-gray-600">Scalable cloud infrastructure and services enabling digital transformation and business agility.</p>
+                  <h4 className="text-xl font-bold mb-2">Advanced Networking Technologies</h4>
+                  <p className="text-gray-600">Deployment of modern network infrastructure using solutions like SD-WAN and Cisco ACI to ensure flexibility, speed, and centralized control.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Cybersecurity & System Protection</h4>
+                  <p className="text-gray-600">End-to-end security architecture that safeguards data integrity and protects IT systems from threats and vulnerabilities.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Virtualization & Resource Optimization</h4>
+                  <p className="text-gray-600">Streamlining infrastructure through virtualization to enhance performance, reduce hardware dependency, and optimize resource utilization.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.7 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Enterprise-Grade Software Solutions</h4>
+                  <p className="text-gray-600">Integration of trusted platforms from industry leaders such as VMware, RedHat, Veeam, SUSE, and Nutanix for maximum compatibility and support.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.8 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">IT Monitoring & Management Tools</h4>
+                  <p className="text-gray-600">Specialized software like IBM QRadar and Tufin to enhance infrastructure visibility, automate policy management, and strengthen security operations.</p>
                 </motion.div>
                 </>
               ) : (
@@ -120,8 +155,8 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Hạ tầng Mạng</h4>
-                  <p className="text-gray-600">Thiết kế và triển khai giải pháp mạng an toàn, có khả năng mở rộng cho môi trường doanh nghiệp.</p>
+                  <h4 className="text-xl font-bold mb-2">Hệ thống Máy chủ & Lưu trữ dữ liệu</h4>
+                  <p className="text-gray-600">Triển khai máy chủ hiệu năng cao và giải pháp lưu trữ mở rộng, đáp ứng nhu cầu xử lý và lưu trữ ngày càng tăng.</p>
                 </motion.div>
                 <motion.div 
                   className="bg-gray-50 p-6 rounded-lg"
@@ -129,8 +164,44 @@ const IctServicePage: React.FC = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                 >
-                  <h4 className="text-xl font-bold mb-2">Giải pháp Đám mây</h4>
-                  <p className="text-gray-600">Cơ sở hạ tầng và dịch vụ đám mây có khả năng mở rộng cho phép chuyển đổi số và linh hoạt trong kinh doanh.</p>
+                  <h4 className="text-xl font-bold mb-2">Công nghệ Mạng tiên tiến</h4>
+                  <p className="text-gray-600">Ứng dụng các công nghệ hiện đại như SD-WAN, Cisco ACI nhằm tối ưu hóa tốc độ, tính linh hoạt và khả năng quản lý tập trung.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.5 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">An ninh mạng & Bảo mật hệ thống</h4>
+                  <p className="text-gray-600">Xây dựng kiến trúc bảo mật toàn diện, đảm bảo dữ liệu và hệ thống luôn an toàn trước các rủi ro và mối đe dọa.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.6 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Ảo hóa & Tối ưu tài nguyên</h4>
+                  <p className="text-gray-600">Tận dụng công nghệ ảo hóa để nâng cao hiệu suất, giảm phụ thuộc phần cứng và sử dụng tài nguyên hiệu quả hơn.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.7 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Giải pháp phần mềm doanh nghiệp</h4>
+                  <p className="text-gray-600">Tích hợp các nền tảng uy tín từ các hãng hàng đầu như VMware, RedHat, Veeam, SUSE, Nutanix,… để đảm bảo tính tương thích và hỗ trợ lâu dài.</p>
+                </motion.div>
+                <motion.div 
+                  className="bg-gray-50 p-6 rounded-lg"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.8 }}
+                >
+                  <h4 className="text-xl font-bold mb-2">Phần mềm giám sát & quản lý thiết bị</h4>
+                  <p className="text-gray-600">Sử dụng các công cụ chuyên dụng như IBM QRadar, Tufin giúp tăng cường khả năng giám sát, quản trị chính sách và bảo mật hạ tầng CNTT hiệu quả.</p>
                 </motion.div>
                 </>
               )}

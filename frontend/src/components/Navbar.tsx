@@ -7,10 +7,10 @@ import LanguageSwitcher from './LanguageSwitcher';
 import logoImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png';
 
 const services = [
-  { name: 'ICT', path: '/services/ict' },
-  { name: 'Broadcasting', path: '/services/broadcasting' },
-  { name: 'Business Application', path: '/services/business-application' },
-  { name: 'M&E', path: '/services/me' },
+  { name: { en: 'ICT', vi: 'ICT' }, path: '/services/ict' },
+  { name: { en: 'Broadcasting', vi: 'Truyền thông' }, path: '/services/broadcasting' },
+  { name: { en: 'Business Application', vi: 'Ứng dụng doanh nghiệp' }, path: '/services/business-application' },
+  { name: { en: 'M&E', vi: 'M&E' }, path: '/services/me' },
 ];
 
 const Navbar: React.FC = () => {
@@ -18,7 +18,8 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   
   useEffect(() => {
     const handleScroll = () => {
@@ -102,7 +103,7 @@ const Navbar: React.FC = () => {
                             location.pathname === service.path ? 'text-primary' : 'hover:text-primary hover:bg-primary/10'
                           }`}
                         >
-                          {service.name}
+                          {typeof service.name === 'string' ? service.name : currentLanguage === 'vi' ? service.name.vi : service.name.en}
                         </Link>
                       ))}
                     </div>
@@ -188,7 +189,7 @@ const Navbar: React.FC = () => {
                           }`}
                           onClick={() => setMobileMenuOpen(false)}
                         >
-                          {service.name}
+                          {typeof service.name === 'string' ? service.name : currentLanguage === 'vi' ? service.name.vi : service.name.en}
                         </Link>
                       ))}
                     </div>

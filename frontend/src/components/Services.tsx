@@ -35,7 +35,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description, del
       onClick={() => setIsActive(!isActive)}
     >
       <div className="flex flex-col h-full">
-        <div className="w-16 h-16 rounded-lg mb-6 p-3.5 flex items-center justify-center bg-[#E6F5EF] text-primary transition-colors duration-300">
+        <div className="w-16 h-16 rounded-lg mb-6 p-3.5 flex items-center justify-center bg-[#f0f4d8] text-primary transition-colors duration-300">
           <div className="text-2xl">{icon}</div>
         </div>
         <h3 className={`text-xl font-bold mb-3 transition-colors duration-300 ${isActive ? 'text-white' : 'group-hover:text-white'}`}>

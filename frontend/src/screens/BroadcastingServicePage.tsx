@@ -77,14 +77,14 @@ const BroadcastingServicePage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-6">
-              {isEn ? 'Broadcasting Solutions' : 'Giải Pháp Truyền Thông'}
+          <h2 className="text-3xl font-bold mb-6">
+              {isEn ? 'BROADCASTING & MEDIA SYSTEMS' : 'HỆ THỐNG TRUYỀN THÔNG SỐ & HỘI NGHỊ'}
           </h2>
             <div className="h-1 w-20 bg-primary mb-8"></div>
             <p className="text-gray-600 mb-8 leading-relaxed">
               {isEn 
-                ? "We provide comprehensive broadcasting solutions that enable seamless content delivery, professional media management, and high-quality audio-visual experiences for various industries."
-                : "Chúng tôi cung cấp giải pháp truyền thông toàn diện cho phép phân phối nội dung liền mạch, quản lý phương tiện chuyên nghiệp và trải nghiệm nghe nhìn chất lượng cao cho nhiều ngành công nghiệp."}
+                ? "We provide modern communication infrastructure for seamless connectivity, presentation, and remote monitoring."
+                : "Chúng tôi cung cấp giải pháp phát triển hạ tầng truyền thông hiện đại phục vụ kết nối, trình chiếu và giám sát từ xa hiệu quả."}
             </p>
           </motion.div>
 
@@ -93,9 +93,6 @@ const BroadcastingServicePage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold mb-4">
-              {isEn ? 'Our Broadcasting Solutions' : 'Giải Pháp Truyền Thông Của Chúng Tôi'}
-            </h3>
           <div className="space-y-6">
                 {isEn ? (
                   <>
@@ -103,28 +100,10 @@ const BroadcastingServicePage: React.FC = () => {
                     className="bg-gray-50 p-6 rounded-lg"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Professional Broadcasting Systems</h4>
-                    <p className="text-gray-600">Complete broadcasting solutions for television stations, production studios, and media companies, including equipment, software, and integration services.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Digital Content Management</h4>
-                    <p className="text-gray-600">Advanced systems for storing, managing, and distributing digital content across multiple platforms and channels efficiently.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 0.5 }}
                   >
-                    <h4 className="text-xl font-bold mb-2">Audio-Visual Integration</h4>
-                    <p className="text-gray-600">Custom audio-visual solutions for conference rooms, auditoriums, and entertainment venues, ensuring high-quality multimedia experiences.</p>
+                    <h4 className="text-xl font-bold mb-2">Video Conference Systems</h4>
+                    <p className="text-gray-600">Enables high-quality, multi-point video conferencing to enhance remote communication and collaboration.</p>
                   </motion.div>
                   </>
                 ) : (
@@ -135,26 +114,8 @@ const BroadcastingServicePage: React.FC = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: 0.3 }}
                   >
-                    <h4 className="text-xl font-bold mb-2">Hệ thống Phát sóng Chuyên nghiệp</h4>
-                    <p className="text-gray-600">Giải pháp phát sóng toàn diện cho đài truyền hình, studio sản xuất và công ty truyền thông, bao gồm thiết bị, phần mềm và dịch vụ tích hợp.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.4 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Quản lý Nội dung Số</h4>
-                    <p className="text-gray-600">Hệ thống tiên tiến để lưu trữ, quản lý và phân phối nội dung số hiệu quả trên nhiều nền tảng và kênh truyền thông.</p>
-                  </motion.div>
-                  <motion.div 
-                    className="bg-gray-50 p-6 rounded-lg"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.5 }}
-                  >
-                    <h4 className="text-xl font-bold mb-2">Tích hợp Âm thanh - Hình ảnh</h4>
-                    <p className="text-gray-600">Giải pháp âm thanh - hình ảnh tùy chỉnh cho phòng họp, hội trường và địa điểm giải trí, đảm bảo trải nghiệm đa phương tiện chất lượng cao.</p>
+                    <h4 className="text-xl font-bold mb-2">Hệ thống Hội nghị Truyền hình</h4>
+                    <p className="text-gray-600">Hỗ trợ kết nối đa điểm với hình ảnh và âm thanh chất lượng cao, nâng cao hiệu quả giao tiếp và cộng tác từ xa.</p>
                   </motion.div>
                   </>
                 )}

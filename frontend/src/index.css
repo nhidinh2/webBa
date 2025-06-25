@@ -6,9 +6,9 @@
 @tailwind utilities;
 
 :root {
-  --primary: #C6D92B; /* Updated primary color */
-  --primary-dark: #B3C425; /* Darker shade for hover states */
-  --secondary: #2563EB;
+  --primary: #c1d72e; /* Updated primary color */
+  --primary-dark: #a8c025; /* Darker shade for hover states */
+  --secondary: #6d6e71;
   --dark: #111827;
   --darker: #121212;
   --light: #F9FAFB;

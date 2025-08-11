@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Clients from './components/Clients';
 import Partners from './components/Partners';
+import News from './components/News';
 import Footer from './components/Footer';
 import Contact from './screens/Contact';
 import Home from './screens/Home';
@@ -15,6 +16,7 @@ import IctServicePage from './screens/IctServicePage';
 import BroadcastingServicePage from './screens/BroadcastingServicePage';
 import BusinessApplicationServicePage from './screens/BusinessApplicationServicePage';
 import MeServicePage from './screens/MeServicePage';
+import Blog from './screens/Blog';
 import ScrollToTop from './components/ScrollToTop';
 import Services from './components/Services';
 
@@ -58,6 +60,12 @@ function App() {
               <Partners />
             </div>
           } />
+          <Route path="/news" element={
+            <div className="pt-20">
+              <News />
+            </div>
+          } />
+          <Route path="/blog/:id" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={
             <div className="pt-20">

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiMapPin, FiPhone, FiMail, FiFacebook, FiLinkedin, FiSend, FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import logoImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png';
+import logoImg from '../../image/LOGO.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -51,12 +51,12 @@ const Footer: React.FC = () => {
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <Link to="/" className="text-white font-bold text-3xl flex items-center mb-6">
-                <div className="flex items-center justify-center h-24">
-                  <img src={logoImg} alt="NetCorp Logo" className="h-full w-auto object-contain" />
+              <Link to="/" className="text-white font-bold text-3xl flex items-center mb-4">
+                <div className="flex items-center justify-center h-28 md:h-32 lg:h-36 w-32 md:w-36 lg:w-40 overflow-hidden">
+                  <img src={logoImg} alt="NetCorp Logo" className="h-full w-full object-cover" />
                 </div>
               </Link>
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-400 mb-6 -mt-2">
                 {currentLanguage === 'vi'
                   ? "Chuyên gia về tư vấn giải pháp, giám sát và triển khai các ứng dụng quản trị cho các doanh nghiệp và các tổ chức sử dụng công nghệ nền tảng của hãng Oracle."
                   : "Expert in consulting solutions, monitoring and deploying administrative applications for businesses and organizations using Oracle's platform technology."}
@@ -176,7 +176,7 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <p className="text-gray-400">+84 71296820</p>
+                    <p className="text-gray-400">02477701912</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -186,7 +186,7 @@ const Footer: React.FC = () => {
                     </div>
                   </div>
                   <div className="ml-4">
-                    <p className="text-gray-400">info@netsys.com.vn</p>
+                    <p className="text-gray-400">info@netcorp.com</p>
                   </div>
                 </li>
               </ul>

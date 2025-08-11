@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Breadcrumb from './Breadcrumb';
-import netcorpImg from '../../image/ChatGPT Image Jun 14, 2025, 12_41_24 AM.png';
+import netcorpImg from '../../image/LOGO.png';
 
 type TabType = 'humanResource' | 'visionMission' | 'coreValues';
 
@@ -105,11 +105,11 @@ const About: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
+              <div className="relative rounded-3xl overflow-hidden aspect-[3/2]">
                 <img
                   src={netcorpImg}
                   alt="NetCorp Team"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 <div 
                   className="absolute bottom-0 left-0 w-0 h-0 border-l-[120px] border-t-[120px] border-t-transparent" 

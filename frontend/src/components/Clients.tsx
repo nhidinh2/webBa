@@ -21,241 +21,441 @@ const Clients: React.FC = () => {
 
   // Sample company data - replace with your actual company data
   const companies: Company[] = [
-    // Enterprise Companies (7)
-  {
-    id: 1,
-      name: "Tech Solutions Corp",
+    // Enterprise Companies (15)
+    {
+      id: 1,
+      name: "ACV",
       category: "enterprise",
       description: {
-        en: "Leading enterprise technology solutions provider",
-        vi: "Nhà cung cấp giải pháp công nghệ doanh nghiệp hàng đầu"
+        en: "Airport Corporation of Vietnam",
+        vi: "Tổng công ty Cảng hàng không Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?business&1"
-  },
-  {
-    id: 2,
-      name: "Digital Innovations Ltd",
+      image: "/image/enterprise/logo ACV.jpg"
+    },
+    {
+      id: 2,
+      name: "Dịch vụ mặt đất sân bay",
       category: "enterprise",
       description: {
-        en: "Digital transformation and IT infrastructure",
-        vi: "Chuyển đổi số và cơ sở hạ tầng CNTT"
+        en: "Vietnam Airport Ground Services",
+        vi: "Công ty TNHH Dịch vụ mặt đất sân bay Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?technology&2"
-  },
-  {
-    id: 3,
-      name: "Smart Systems Co",
+      image: "/image/enterprise/logo cong ty tnhh dịch vụ mặt đất sân bay việt nam.png"
+    },
+    {
+      id: 3,
+      name: "Genco 1",
       category: "enterprise",
       description: {
-        en: "Intelligent automation solutions",
-        vi: "Giải pháp tự động hóa thông minh"
+        en: "Power Generation Corporation 1",
+        vi: "Tổng công ty Phát điện 1"
       },
-      image: "https://source.unsplash.com/random/800x600?automation&3"
-  },
-  {
-    id: 4,
-      name: "Future Tech Inc",
+      image: "/image/enterprise/logo Genco 1.jpg"
+    },
+    {
+      id: 4,
+      name: "NCTS",
       category: "enterprise",
       description: {
-        en: "Next-generation enterprise solutions",
-        vi: "Giải pháp doanh nghiệp thế hệ mới"
+        en: "National Single Window Portal",
+        vi: "Cổng thông tin một cửa quốc gia"
       },
-      image: "https://source.unsplash.com/random/800x600?future&4"
-  },
-  {
-    id: 5,
-      name: "Data Systems Corp",
+      image: "/image/enterprise/logo NCTS.jpg"
+    },
+    {
+      id: 5,
+      name: "PetroVietnam",
       category: "enterprise",
       description: {
-        en: "Enterprise data management solutions",
-        vi: "Giải pháp quản lý dữ liệu doanh nghiệp"
+        en: "Vietnam Oil and Gas Group",
+        vi: "Tập đoàn Dầu khí Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?data&5"
-  },
-  {
-    id: 6,
-      name: "Cloud Solutions Ltd",
+      image: "/image/enterprise/logo petrovietnam.jpg"
+    },
+    {
+      id: 6,
+      name: "PV Gas",
       category: "enterprise",
       description: {
-        en: "Enterprise cloud infrastructure",
-        vi: "Cơ sở hạ tầng đám mây doanh nghiệp"
+        en: "PetroVietnam Gas Corporation",
+        vi: "Tổng công ty Khí Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?cloud&6"
+      image: "/image/enterprise/logo PVgas.png"
     },
     {
       id: 7,
-      name: "Network Systems Co",
+      name: "Tổng công ty Xi măng VN",
       category: "enterprise",
       description: {
-        en: "Enterprise networking solutions",
-        vi: "Giải pháp mạng doanh nghiệp"
+        en: "Vietnam Cement Corporation",
+        vi: "Tổng công ty Xi măng Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?network&7"
+      image: "/image/enterprise/logo tổng cty xi măng vn.jpg"
     },
-
-    // Banking Companies (7)
     {
       id: 8,
-      name: "VietBank Corp",
+      name: "VIAGS",
+      category: "enterprise",
+      description: {
+        en: "Vietnam Airlines Ground Services",
+        vi: "Công ty Dịch vụ mặt đất hàng không Việt Nam"
+      },
+      image: "/image/enterprise/logo Viags.jpg"
+    },
+    {
+      id: 9,
+      name: "Viettel Solutions",
+      category: "enterprise",
+      description: {
+        en: "Viettel Technology Solutions",
+        vi: "Tập đoàn Công nghiệp - Viễn thông Quân đội"
+      },
+      image: "/image/enterprise/logo viettel solutions.png"
+    },
+    {
+      id: 10,
+      name: "Vinalines",
+      category: "enterprise",
+      description: {
+        en: "Vietnam National Shipping Lines",
+        vi: "Tổng công ty Hàng hải Việt Nam"
+      },
+      image: "/image/enterprise/logo vinalines.jpg"
+    },
+    {
+      id: 11,
+      name: "VNPay",
+      category: "enterprise",
+      description: {
+        en: "Vietnam Payment Solution",
+        vi: "Công ty Cổ phần Giải pháp Thanh toán Việt Nam"
+      },
+      image: "/image/enterprise/logo vnpay.jpg"
+    },
+    {
+      id: 12,
+      name: "VTVcab",
+      category: "enterprise",
+      description: {
+        en: "Vietnam Television Cable",
+        vi: "Công ty Truyền hình cáp Việt Nam"
+      },
+      image: "/image/enterprise/logo VTVcab.png"
+    },
+    {
+      id: 13,
+      name: "TH Group",
+      category: "enterprise",
+      description: {
+        en: "TH Group Corporation",
+        vi: "Tập đoàn TH"
+      },
+      image: "/image/enterprise/Logo_th_group.png"
+    },
+    {
+      id: 14,
+      name: "MCredit",
+      category: "enterprise",
+      description: {
+        en: "MCredit Financial Services",
+        vi: "Công ty Tài chính MCredit"
+      },
+      image: "/image/enterprise/logo-mcredit-2.png"
+    },
+    {
+      id: 15,
+      name: "NAPAS",
+      category: "enterprise",
+      description: {
+        en: "National Payment Corporation",
+        vi: "Công ty Cổ phần Thanh toán Quốc gia Việt Nam"
+      },
+      image: "/image/enterprise/logo-napas.png"
+    },
+
+    // Banking Companies (19)
+    {
+      id: 16,
+      name: "ABBank",
       category: "bank",
       description: {
         en: "Digital banking transformation",
         vi: "Chuyển đổi số ngân hàng"
       },
-      image: "https://source.unsplash.com/random/800x600?bank&8"
+      image: "/image/bank/logo abbank.png"
     },
     {
-      id: 9,
-      name: "Finance Solutions",
+      id: 17,
+      name: "ABIC",
       category: "bank",
       description: {
         en: "Financial technology solutions",
         vi: "Giải pháp công nghệ tài chính"
       },
-      image: "https://source.unsplash.com/random/800x600?finance&9"
+      image: "/image/bank/logo ABIC.png"
     },
     {
-      id: 10,
-      name: "Digital Banking Co",
+      id: 18,
+      name: "ACB Bank",
       category: "bank",
       description: {
         en: "Modern banking infrastructure",
         vi: "Cơ sở hạ tầng ngân hàng hiện đại"
       },
-      image: "https://source.unsplash.com/random/800x600?banking&10"
+      image: "/image/bank/logo ACB Bank.png"
     },
     {
-      id: 11,
-      name: "Payment Tech Ltd",
+      id: 19,
+      name: "Agribank",
       category: "bank",
       description: {
-        en: "Payment processing solutions",
-        vi: "Giải pháp xử lý thanh toán"
+        en: "Agricultural banking solutions",
+        vi: "Giải pháp ngân hàng nông nghiệp"
       },
-      image: "https://source.unsplash.com/random/800x600?payment&11"
+      image: "/image/bank/logo agribank.png"
     },
     {
-      id: 12,
-      name: "Secure Banking Systems",
+      id: 20,
+      name: "Bắc Á Bank",
       category: "bank",
       description: {
-        en: "Secure banking infrastructure",
-        vi: "Cơ sở hạ tầng ngân hàng an toàn"
+        en: "Regional banking services",
+        vi: "Dịch vụ ngân hàng khu vực"
       },
-      image: "https://source.unsplash.com/random/800x600?security&12"
+      image: "/image/bank/logo Bắc Á.png"
     },
     {
-      id: 13,
-      name: "FinTech Solutions",
+      id: 21,
+      name: "LPBank",
       category: "bank",
       description: {
-        en: "Financial technology innovation",
-        vi: "Đổi mới công nghệ tài chính"
+        en: "Digital banking innovation",
+        vi: "Đổi mới ngân hàng số"
       },
-      image: "https://source.unsplash.com/random/800x600?fintech&13"
+      image: "/image/bank/logo LPbank.png"
     },
     {
-      id: 14,
-      name: "Banking Tech Corp",
+      id: 22,
+      name: "MBS",
       category: "bank",
       description: {
-        en: "Banking technology solutions",
-        vi: "Giải pháp công nghệ ngân hàng"
+        en: "Securities and banking services",
+        vi: "Dịch vụ chứng khoán và ngân hàng"
       },
-      image: "https://source.unsplash.com/random/800x600?banking&14"
+      image: "/image/bank/logo MBS.png"
+    },
+    {
+      id: 23,
+      name: "MIC",
+      category: "bank",
+      description: {
+        en: "Investment and banking solutions",
+        vi: "Giải pháp đầu tư và ngân hàng"
+      },
+      image: "/image/bank/logo MIC.png"
+    },
+    {
+      id: 24,
+      name: "PGBank",
+      category: "bank",
+      description: {
+        en: "Petrol banking services",
+        vi: "Dịch vụ ngân hàng xăng dầu"
+      },
+      image: "/image/bank/logo pgbank.png"
+    },
+    {
+      id: 25,
+      name: "BIDV",
+      category: "bank",
+      description: {
+        en: "Bank for Investment and Development",
+        vi: "Ngân hàng Đầu tư và Phát triển Việt Nam"
+      },
+      image: "/image/bank/logo bidv.jpg"
+    },
+    {
+      id: 26,
+      name: "BSC",
+      category: "bank",
+      description: {
+        en: "Banking and Securities Company",
+        vi: "Công ty Chứng khoán và Ngân hàng"
+      },
+      image: "/image/bank/logo BSC.png"
+    },
+    {
+      id: 27,
+      name: "CoopBank",
+      category: "bank",
+      description: {
+        en: "Cooperative Bank of Vietnam",
+        vi: "Ngân hàng Hợp tác xã Việt Nam"
+      },
+      image: "/image/bank/logo Coopbank.png"
+    },
+    {
+      id: 28,
+      name: "Shinhan Bank",
+      category: "bank",
+      description: {
+        en: "Shinhan Bank Vietnam",
+        vi: "Ngân hàng Shinhan Việt Nam"
+      },
+      image: "/image/bank/logo shinhan bank.png"
+    },
+    {
+      id: 29,
+      name: "Vietcombank",
+      category: "bank",
+      description: {
+        en: "Joint Stock Commercial Bank for Foreign Trade",
+        vi: "Ngân hàng Thương mại Cổ phần Ngoại thương Việt Nam"
+      },
+      image: "/image/bank/logo Vietcombank.png"
+    },
+    {
+      id: 30,
+      name: "VietinBank",
+      category: "bank",
+      description: {
+        en: "Joint Stock Commercial Bank for Industry and Trade",
+        vi: "Ngân hàng Thương mại Cổ phần Công thương Việt Nam"
+      },
+      image: "/image/bank/logo Vietinbank.png"
+    },
+    {
+      id: 31,
+      name: "Coop Bank",
+      category: "bank",
+      description: {
+        en: "Cooperative Bank Services",
+        vi: "Dịch vụ Ngân hàng Hợp tác"
+      },
+      image: "/image/bank/logo-coop-bank.jpg"
+    },
+    {
+      id: 32,
+      name: "HDBank",
+      category: "bank",
+      description: {
+        en: "HDBank Commercial Joint Stock Bank",
+        vi: "Ngân hàng Thương mại Cổ phần Phát triển TP.HCM"
+      },
+      image: "/image/bank/Logo-HDBank.png"
+    },
+    {
+      id: 33,
+      name: "VietBank",
+      category: "bank",
+      description: {
+        en: "VietBank Commercial Joint Stock Bank",
+        vi: "Ngân hàng Thương mại Cổ phần Việt Nam Thương Tín"
+      },
+      image: "/image/bank/logo-vietbank.jpg"
+    },
+    {
+      id: 34,
+      name: "Sacombank",
+      category: "bank",
+      description: {
+        en: "Saigon Thuong Tin Commercial Joint Stock Bank",
+        vi: "Ngân hàng Thương mại Cổ phần Sài Gòn Thương Tín"
+      },
+      image: "/image/bank/Logo-Sacombank.png"
     },
 
-    // Government Agencies (3)
+    // Government Agencies (6)
     {
-      id: 15,
-      name: "Government Digital Agency",
+      id: 35,
+      name: "Ban Cơ yếu Chính phủ",
       category: "government",
       description: {
-        en: "National digital transformation initiative",
-        vi: "Sáng kiến chuyển đổi số quốc gia"
+        en: "Government Cipher Committee",
+        vi: "Ban Cơ yếu Chính phủ"
       },
-      image: "https://source.unsplash.com/random/800x600?government&15"
+      image: "/image/govern/logo ban cơ yếu chính phủ.png"
     },
     {
-      id: 16,
-      name: "Public Services Tech",
+      id: 36,
+      name: "Bộ TNMT",
       category: "government",
       description: {
-        en: "Public service digitalization",
-        vi: "Số hóa dịch vụ công"
+        en: "Ministry of Natural Resources and Environment",
+        vi: "Bộ Tài nguyên và Môi trường"
       },
-      image: "https://source.unsplash.com/random/800x600?public&16"
+      image: "/image/govern/logo Bộ TNMT.png"
     },
     {
-      id: 17,
-      name: "Smart City Solutions",
+      id: 37,
+      name: "Bộ Văn hóa",
       category: "government",
       description: {
-        en: "Smart city infrastructure",
-        vi: "Cơ sở hạ tầng thành phố thông minh"
+        en: "Ministry of Culture",
+        vi: "Bộ Văn hóa, Thể thao và Du lịch"
       },
-      image: "https://source.unsplash.com/random/800x600?city&17"
+      image: "/image/govern/logo Bộ Văn hóa.jpg"
+    },
+    {
+      id: 38,
+      name: "Tỉnh Bắc Ninh",
+      category: "government",
+      description: {
+        en: "Bac Ninh Province",
+        vi: "Tỉnh Bắc Ninh"
+      },
+      image: "/image/govern/logo tỉnh bắc ninh.png"
+    },
+    {
+      id: 39,
+      name: "Tỉnh Phú Thọ",
+      category: "government",
+      description: {
+        en: "Phu Tho Province",
+        vi: "Tỉnh Phú Thọ"
+      },
+      image: "/image/govern/Logo_tỉnh_Phú_Thọ.png"
     },
 
-    // Foreign Companies (5)
+    // Foreign Companies (3)
     {
-      id: 18,
+      id: 40,
       name: "Global Tech Solutions",
       category: "foreign",
       description: {
         en: "International technology services",
         vi: "Dịch vụ công nghệ quốc tế"
       },
-      image: "https://source.unsplash.com/random/800x600?global&18"
+      image: "https://source.unsplash.com/random/800x600?global&1"
     },
     {
-      id: 19,
+      id: 41,
       name: "Worldwide Systems Inc",
       category: "foreign",
       description: {
         en: "Global IT infrastructure",
         vi: "Cơ sở hạ tầng CNTT toàn cầu"
       },
-      image: "https://source.unsplash.com/random/800x600?worldwide&19"
+      image: "https://source.unsplash.com/random/800x600?worldwide&2"
     },
     {
-      id: 20,
+      id: 42,
       name: "International Data Corp",
       category: "foreign",
       description: {
         en: "International data solutions",
         vi: "Giải pháp dữ liệu quốc tế"
       },
-      image: "https://source.unsplash.com/random/800x600?international&20"
-    },
-    {
-      id: 21,
-      name: "Global Network Ltd",
-      category: "foreign",
-      description: {
-        en: "Global networking solutions",
-        vi: "Giải pháp mạng toàn cầu"
-      },
-      image: "https://source.unsplash.com/random/800x600?network&21"
-    },
-    {
-      id: 22,
-      name: "Multinational Tech Co",
-      category: "foreign",
-      description: {
-        en: "Multinational technology services",
-        vi: "Dịch vụ công nghệ đa quốc gia"
-      },
-      image: "https://source.unsplash.com/random/800x600?multinational&22"
+      image: "https://source.unsplash.com/random/800x600?international&3"
     }
   ];
 
   const categories = [
-    { id: 'all', label: currentLanguage === 'vi' ? 'TẤT CẢ' : 'ALL', count: companies.length },
-    { id: 'enterprise', label: currentLanguage === 'vi' ? 'DOANH NGHIỆP' : 'ENTERPRISE', count: 7 },
-    { id: 'bank', label: currentLanguage === 'vi' ? 'NGÂN HÀNG' : 'BANKING', count: 7 },
-    { id: 'government', label: currentLanguage === 'vi' ? 'CHÍNH PHỦ' : 'GOVERNMENT', count: 3 },
-    { id: 'foreign', label: currentLanguage === 'vi' ? 'NƯỚC NGOÀI' : 'FOREIGN', count: 5 }
+    { id: 'all', label: currentLanguage === 'vi' ? 'TẤT CẢ' : 'ALL', count: 42 },
+    { id: 'enterprise', label: currentLanguage === 'vi' ? 'DOANH NGHIỆP' : 'ENTERPRISE', count: 15 },
+    { id: 'bank', label: currentLanguage === 'vi' ? 'NGÂN HÀNG' : 'BANKING', count: 19 },
+    { id: 'government', label: currentLanguage === 'vi' ? 'CHÍNH PHỦ' : 'GOVERNMENT', count: 6 },
+    { id: 'foreign', label: currentLanguage === 'vi' ? 'NƯỚC NGOÀI' : 'FOREIGN', count: 3 },
   ];
 
   const filteredCompanies = activeCategory === 'all' 
@@ -369,11 +569,11 @@ const Clients: React.FC = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
               >
-                <div className="relative h-48 w-full overflow-hidden">
+                <div className="relative h-48 w-full overflow-hidden bg-white flex items-center justify-center p-4">
                   <img
                     src={company.image}
                     alt={company.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="text-center text-white p-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

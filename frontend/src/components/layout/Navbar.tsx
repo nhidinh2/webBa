@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiSearch, FiChevronDown } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
-import logoImg from '../../image/LOGO.png';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
+import logoImg from '../../../image/LOGO.png';
 
 const services = [
   { name: { en: 'ICT', vi: 'ICT' }, path: '/services/ict' },

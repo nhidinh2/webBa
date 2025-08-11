@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiMapPin, FiPhone, FiMail, FiFacebook, FiLinkedin, FiSend, FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import logoImg from '../../image/LOGO.png';
+import logoImg from '../../../image/LOGO.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

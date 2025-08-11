@@ -3,22 +3,26 @@ import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AOS from 'aos';
 
-// Components
-import Navbar from './components/Navbar';
-import About from './components/About';
-import Clients from './components/Clients';
-import Partners from './components/Partners';
-import News from './components/News';
-import Footer from './components/Footer';
-import Contact from './screens/Contact';
-import Home from './screens/Home';
-import IctServicePage from './screens/IctServicePage';
-import BroadcastingServicePage from './screens/BroadcastingServicePage';
-import BusinessApplicationServicePage from './screens/BusinessApplicationServicePage';
-import MeServicePage from './screens/MeServicePage';
-import Blog from './screens/Blog';
-import ScrollToTop from './components/ScrollToTop';
-import Services from './components/Services';
+// Layout Components
+import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+
+// UI Components
+import About from './components/ui/About';
+import Clients from './components/ui/Clients';
+import Partners from './components/ui/Partners';
+import News from './components/ui/News';
+import Services from './components/ui/Services';
+import ScrollToTop from './components/ui/ScrollToTop';
+
+// Page Components
+import Contact from './components/pages/Contact';
+import Home from './components/pages/Home';
+import IctServicePage from './components/pages/IctServicePage';
+import BroadcastingServicePage from './components/pages/BroadcastingServicePage';
+import BusinessApplicationServicePage from './components/pages/BusinessApplicationServicePage';
+import MeServicePage from './components/pages/MeServicePage';
+import Blog from './components/pages/Blog';
 
 function App() {
   const { i18n } = useTranslation();

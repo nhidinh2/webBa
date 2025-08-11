@@ -1,8 +1,8 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import ReadySection from '../components/ReadySection';
-import VideoSection from '../components/VideoSection';
-import WorkShowcase from '../components/WorkShowcase';
+import Hero from '../ui/Hero';
+import ReadySection from '../ui/ReadySection';
+import VideoSection from '../ui/VideoSection';
+import WorkShowcase from '../ui/WorkShowcase';
 
 const Home: React.FC = () => {
   return (

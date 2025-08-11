@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiHome, FiBriefcase, FiCpu } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import Breadcrumb from '../components/Breadcrumb';
+import Breadcrumb from '../ui/Breadcrumb';
 import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {

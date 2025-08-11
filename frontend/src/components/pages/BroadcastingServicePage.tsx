@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiChevronRight, FiPhone } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import Breadcrumb from '../components/Breadcrumb';
+import Breadcrumb from '../ui/Breadcrumb';
 
 const services = [
   { name: { en: 'ICT', vi: 'ICT' }, path: '/services/ict' },

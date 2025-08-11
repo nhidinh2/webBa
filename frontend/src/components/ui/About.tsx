@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Breadcrumb from './Breadcrumb';
-import netcorpImg from '../../image/LOGO.png';
+import netcorpImg from '../../../image/LOGO.png';
 
 type TabType = 'humanResource' | 'visionMission' | 'coreValues';
 

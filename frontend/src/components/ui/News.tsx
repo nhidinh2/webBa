@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -23,7 +23,6 @@ interface NewsItem {
 const News: React.FC = () => {
   const { i18n } = useTranslation();
   const currentLanguage = i18n.language;
-  const [activeCategory, setActiveCategory] = useState('all');
   const navigate = useNavigate();
 
   const newsItems: NewsItem[] = [
@@ -60,23 +59,7 @@ const News: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', label: currentLanguage === 'vi' ? 'TẤT CẢ' : 'ALL', count: newsItems.length },
-    { id: 'security', label: currentLanguage === 'vi' ? 'BẢO MẬT' : 'SECURITY', count: newsItems.filter(n => n.category === 'security').length }
-  ];
 
-  const filteredNews = activeCategory === 'all'
-    ? newsItems
-    : newsItems.filter(news => news.category === activeCategory);
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString(currentLanguage === 'vi' ? 'vi-VN' : 'en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
 
   return (
     <section className="relative">
@@ -133,7 +116,7 @@ const News: React.FC = () => {
 
           {/* News Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredNews.map((news, index) => (
+            {newsItems.map((news, index) => (
               <motion.article 
                 key={news.id}
                 initial={{ opacity: 0, y: 20 }}

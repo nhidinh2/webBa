@@ -8,10 +8,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "app/api/**/*.js": {
-      "maxDuration": 10
-    }
   }
 } 

@@ -11,10 +11,15 @@ export default defineConfig({
       output: {
         manualChunks: undefined
       }
-    }
+    },
+    target: 'es2015',
+    minify: 'esbuild'
   },
   server: {
     port: 3000,
     host: true
+  },
+  optimizeDeps: {
+    exclude: ['@rollup/rollup-linux-x64-gnu']
   }
 })

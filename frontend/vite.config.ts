@@ -13,13 +13,15 @@ export default defineConfig({
       }
     },
     target: 'es2015',
-    minify: 'esbuild'
+    minify: 'esbuild',
+    ssr: false,
+    sourcemap: false
   },
   server: {
     port: 3000,
     host: true
   },
-  optimizeDeps: {
-    exclude: ['@rollup/rollup-linux-x64-gnu']
+  define: {
+    'process.env.NODE_ENV': '"production"'
   }
 })

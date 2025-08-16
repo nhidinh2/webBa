@@ -63,18 +63,7 @@ const Hero: React.FC = () => {
                   alt="Digital Marketing Team"
                   className="w-full h-full object-cover"
                 />
-                {/* Decorative lines */}
-                <div className="absolute -bottom-4 -right-4 w-40 h-40">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute w-full h-0.5 bg-white/30 origin-left"
-                      style={{
-                        transform: `rotate(${i * 15}deg) translateY(${i * 10}px)`
-                      }}
-                    ></div>
-                  ))}
-                </div>
+
               </div>
 
               {/* Floating info boxes */}

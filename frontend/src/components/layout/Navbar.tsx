@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { FiSearch, FiChevronDown } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../ui/LanguageSwitcher';
-import logoImg from '../../../image/LOGO.png';
 
 const services = [
   { name: { en: 'ICT', vi: 'ICT' }, path: '/services/ict' },
@@ -66,7 +65,7 @@ const Navbar: React.FC = () => {
           <div className="flex-shrink-0">
             <Link to="/" className={`flex items-center ${scrolled ? 'text-white' : 'text-white'}`}> 
               <div className="flex items-center justify-center h-20 md:h-24 lg:h-28 -my-2">
-                <img src={logoImg} alt="NetCorp Logo" className="h-full w-auto object-contain" />
+                <img src="/image/LOGO.png" alt="NetCorp Logo" className="h-full w-auto object-contain" />
               </div>
             </Link>
           </div>

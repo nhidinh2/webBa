@@ -20,88 +20,198 @@ const Partners: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const partners: Partner[] = [
-    // Technology Partners
+    // Banking Partners
     {
       id: 1,
-      name: "Microsoft",
-      category: "technology",
+      name: "Vietcombank",
+      category: "banking",
       description: {
-        en: "Cloud and enterprise software solutions",
-        vi: "Giải pháp phần mềm doanh nghiệp và đám mây"
+        en: "Leading commercial bank in Vietnam",
+        vi: "Ngân hàng thương mại hàng đầu Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?microsoft&1"
+      image: "/image/bank/logo Vietcombank.png"
     },
     {
       id: 2,
-      name: "AWS",
-      category: "technology",
+      name: "BIDV",
+      category: "banking",
       description: {
-        en: "Cloud infrastructure and services",
-        vi: "Dịch vụ và cơ sở hạ tầng đám mây"
+        en: "Bank for Investment and Development of Vietnam",
+        vi: "Ngân hàng Đầu tư và Phát triển Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?aws&2"
+      image: "/image/bank/logo bidv.jpg"
     },
     {
       id: 3,
-      name: "Google Cloud",
-      category: "technology",
+      name: "VietinBank",
+      category: "banking",
       description: {
-        en: "Cloud computing and AI solutions",
-        vi: "Giải pháp điện toán đám mây và AI"
+        en: "Vietnam Joint Stock Commercial Bank for Industry and Trade",
+        vi: "Ngân hàng Thương mại Cổ phần Công thương Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?google&3"
+      image: "/image/bank/logo Vietinbank.png"
     },
-
-    // Consulting Partners
     {
       id: 4,
-      name: "Accenture",
-      category: "consulting",
+      name: "Agribank",
+      category: "banking",
       description: {
-        en: "Digital transformation consulting",
-        vi: "Tư vấn chuyển đổi số"
+        en: "Vietnam Bank for Agriculture and Rural Development",
+        vi: "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"
       },
-      image: "https://source.unsplash.com/random/800x600?consulting&4"
+      image: "/image/bank/logo agribank.png"
     },
     {
       id: 5,
-      name: "Deloitte Digital",
-      category: "consulting",
+      name: "ACB Bank",
+      category: "banking",
       description: {
-        en: "Business and technology consulting",
-        vi: "Tư vấn kinh doanh và công nghệ"
+        en: "Asia Commercial Bank",
+        vi: "Ngân hàng Thương mại Cổ phần Á Châu"
       },
-      image: "https://source.unsplash.com/random/800x600?business&5"
+      image: "/image/bank/logo ACB Bank.png"
     },
-
-    // Security Partners
     {
       id: 6,
-      name: "Cisco Systems",
-      category: "security",
+      name: "Sacombank",
+      category: "banking",
       description: {
-        en: "Network security solutions",
-        vi: "Giải pháp bảo mật mạng"
+        en: "Saigon Thuong Tin Commercial Joint Stock Bank",
+        vi: "Ngân hàng Thương mại Cổ phần Sài Gòn Thương Tín"
       },
-      image: "https://source.unsplash.com/random/800x600?security&6"
+      image: "/image/bank/Logo-Sacombank.png"
     },
     {
       id: 7,
-      name: "Palo Alto Networks",
-      category: "security",
+      name: "HDBank",
+      category: "banking",
       description: {
-        en: "Cybersecurity platforms",
-        vi: "Nền tảng bảo mật mạng"
+        en: "Ho Chi Minh City Development Joint Stock Commercial Bank",
+        vi: "Ngân hàng Thương mại Cổ phần Phát triển TP.HCM"
       },
-      image: "https://source.unsplash.com/random/800x600?cybersecurity&7"
+      image: "/image/bank/Logo-HDBank.png"
+    },
+    {
+      id: 8,
+      name: "Shinhan Bank",
+      category: "banking",
+      description: {
+        en: "Shinhan Bank Vietnam",
+        vi: "Ngân hàng Shinhan Việt Nam"
+      },
+      image: "/image/bank/logo shinhan bank.png"
+    },
+
+    // Enterprise Partners
+    {
+      id: 9,
+      name: "PetroVietnam",
+      category: "enterprise",
+      description: {
+        en: "Vietnam Oil and Gas Group",
+        vi: "Tập đoàn Dầu khí Việt Nam"
+      },
+      image: "/image/enterprise/logo petrovietnam.jpg"
+    },
+    {
+      id: 10,
+      name: "Viettel Solutions",
+      category: "enterprise",
+      description: {
+        en: "Viettel Technology Solutions Corporation",
+        vi: "Tổng Công ty Giải pháp Công nghệ Viettel"
+      },
+      image: "/image/enterprise/logo viettel solutions.png"
+    },
+    {
+      id: 11,
+      name: "VNPay",
+      category: "enterprise",
+      description: {
+        en: "Vietnam Payment Solution Joint Stock Company",
+        vi: "Công ty Cổ phần Giải pháp Thanh toán Việt Nam"
+      },
+      image: "/image/enterprise/logo vnpay.jpg"
+    },
+    {
+      id: 12,
+      name: "VTVcab",
+      category: "enterprise",
+      description: {
+        en: "Vietnam Television Cable Corporation",
+        vi: "Tổng Công ty Truyền hình Cáp Việt Nam"
+      },
+      image: "/image/enterprise/logo VTVcab.png"
+    },
+    {
+      id: 13,
+      name: "ACV",
+      category: "enterprise",
+      description: {
+        en: "Airports Corporation of Vietnam",
+        vi: "Tổng Công ty Cảng hàng không Việt Nam"
+      },
+      image: "/image/enterprise/logo ACV.jpg"
+    },
+    {
+      id: 14,
+      name: "Genco 1",
+      category: "enterprise",
+      description: {
+        en: "Power Generation Corporation 1",
+        vi: "Tổng Công ty Phát điện 1"
+      },
+      image: "/image/enterprise/logo Genco 1.jpg"
+    },
+
+    // Government Partners
+    {
+      id: 15,
+      name: "Bộ TNMT",
+      category: "government",
+      description: {
+        en: "Ministry of Natural Resources and Environment",
+        vi: "Bộ Tài nguyên và Môi trường"
+      },
+      image: "/image/govern/logo Bộ TNMT.png"
+    },
+    {
+      id: 16,
+      name: "Bộ Văn hóa",
+      category: "government",
+      description: {
+        en: "Ministry of Culture, Sports and Tourism",
+        vi: "Bộ Văn hóa, Thể thao và Du lịch"
+      },
+      image: "/image/govern/logo Bộ Văn hóa.jpg"
+    },
+    {
+      id: 17,
+      name: "Tỉnh Bắc Ninh",
+      category: "government",
+      description: {
+        en: "Bac Ninh Province People's Committee",
+        vi: "Ủy ban Nhân dân tỉnh Bắc Ninh"
+      },
+      image: "/image/govern/logo tỉnh bắc ninh.png"
+    },
+    {
+      id: 18,
+      name: "Tỉnh Phú Thọ",
+      category: "government",
+      description: {
+        en: "Phu Tho Province People's Committee",
+        vi: "Ủy ban Nhân dân tỉnh Phú Thọ"
+      },
+      image: "/image/govern/Logo_tỉnh_Phú_Thọ.png"
     }
   ];
 
   const categories = [
     { id: 'all', label: currentLanguage === 'vi' ? 'TẤT CẢ' : 'ALL', count: partners.length },
-    { id: 'technology', label: currentLanguage === 'vi' ? 'CÔNG NGHỆ' : 'TECHNOLOGY', count: partners.filter(p => p.category === 'technology').length },
-    { id: 'consulting', label: currentLanguage === 'vi' ? 'TƯ VẤN' : 'CONSULTING', count: partners.filter(p => p.category === 'consulting').length },
-    { id: 'security', label: currentLanguage === 'vi' ? 'BẢO MẬT' : 'SECURITY', count: partners.filter(p => p.category === 'security').length }
+    { id: 'banking', label: currentLanguage === 'vi' ? 'NGÂN HÀNG' : 'BANKING', count: partners.filter(p => p.category === 'banking').length },
+    { id: 'enterprise', label: currentLanguage === 'vi' ? 'DOANH NGHIỆP' : 'ENTERPRISE', count: partners.filter(p => p.category === 'enterprise').length },
+    { id: 'government', label: currentLanguage === 'vi' ? 'CHÍNH PHỦ' : 'GOVERNMENT', count: partners.filter(p => p.category === 'government').length }
   ];
 
   const filteredPartners = activeCategory === 'all'

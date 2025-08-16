@@ -29,7 +29,7 @@ const Partners: React.FC = () => {
         en: "Leading commercial bank in Vietnam",
         vi: "Ngân hàng thương mại hàng đầu Việt Nam"
       },
-      image: "/image/bank/logo Vietcombank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const Partners: React.FC = () => {
         en: "Bank for Investment and Development of Vietnam",
         vi: "Ngân hàng Đầu tư và Phát triển Việt Nam"
       },
-      image: "/image/bank/logo bidv.jpg"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 3,
@@ -49,7 +49,7 @@ const Partners: React.FC = () => {
         en: "Vietnam Joint Stock Commercial Bank for Industry and Trade",
         vi: "Ngân hàng Thương mại Cổ phần Công thương Việt Nam"
       },
-      image: "/image/bank/logo Vietinbank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 4,
@@ -59,7 +59,7 @@ const Partners: React.FC = () => {
         en: "Vietnam Bank for Agriculture and Rural Development",
         vi: "Ngân hàng Nông nghiệp và Phát triển Nông thôn Việt Nam"
       },
-      image: "/image/bank/logo agribank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 5,
@@ -69,7 +69,7 @@ const Partners: React.FC = () => {
         en: "Asia Commercial Bank",
         vi: "Ngân hàng Thương mại Cổ phần Á Châu"
       },
-      image: "/image/bank/logo ACB Bank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 6,
@@ -79,7 +79,7 @@ const Partners: React.FC = () => {
         en: "Saigon Thuong Tin Commercial Joint Stock Bank",
         vi: "Ngân hàng Thương mại Cổ phần Sài Gòn Thương Tín"
       },
-      image: "/image/bank/Logo-Sacombank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 7,
@@ -89,7 +89,7 @@ const Partners: React.FC = () => {
         en: "Ho Chi Minh City Development Joint Stock Commercial Bank",
         vi: "Ngân hàng Thương mại Cổ phần Phát triển TP.HCM"
       },
-      image: "/image/bank/Logo-HDBank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 8,
@@ -99,7 +99,7 @@ const Partners: React.FC = () => {
         en: "Shinhan Bank Vietnam",
         vi: "Ngân hàng Shinhan Việt Nam"
       },
-      image: "/image/bank/logo shinhan bank.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
 
     // Enterprise Partners
@@ -111,7 +111,7 @@ const Partners: React.FC = () => {
         en: "Vietnam Oil and Gas Group",
         vi: "Tập đoàn Dầu khí Việt Nam"
       },
-      image: "/image/enterprise/logo petrovietnam.jpg"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 10,
@@ -121,7 +121,7 @@ const Partners: React.FC = () => {
         en: "Viettel Technology Solutions Corporation",
         vi: "Tổng Công ty Giải pháp Công nghệ Viettel"
       },
-      image: "/image/enterprise/logo viettel solutions.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 11,
@@ -131,7 +131,7 @@ const Partners: React.FC = () => {
         en: "Vietnam Payment Solution Joint Stock Company",
         vi: "Công ty Cổ phần Giải pháp Thanh toán Việt Nam"
       },
-      image: "/image/enterprise/logo vnpay.jpg"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 12,
@@ -141,7 +141,7 @@ const Partners: React.FC = () => {
         en: "Vietnam Television Cable Corporation",
         vi: "Tổng Công ty Truyền hình Cáp Việt Nam"
       },
-      image: "/image/enterprise/logo VTVcab.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 13,
@@ -151,7 +151,7 @@ const Partners: React.FC = () => {
         en: "Airports Corporation of Vietnam",
         vi: "Tổng Công ty Cảng hàng không Việt Nam"
       },
-      image: "/image/enterprise/logo ACV.jpg"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 14,
@@ -161,7 +161,7 @@ const Partners: React.FC = () => {
         en: "Power Generation Corporation 1",
         vi: "Tổng Công ty Phát điện 1"
       },
-      image: "/image/enterprise/logo Genco 1.jpg"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
 
     // Government Partners
@@ -173,7 +173,7 @@ const Partners: React.FC = () => {
         en: "Ministry of Natural Resources and Environment",
         vi: "Bộ Tài nguyên và Môi trường"
       },
-      image: "/image/govern/logo Bộ TNMT.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 16,
@@ -183,7 +183,7 @@ const Partners: React.FC = () => {
         en: "Ministry of Culture, Sports and Tourism",
         vi: "Bộ Văn hóa, Thể thao và Du lịch"
       },
-      image: "/image/govern/logo Bộ Văn hóa.jpg"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 17,
@@ -193,7 +193,7 @@ const Partners: React.FC = () => {
         en: "Bac Ninh Province People's Committee",
         vi: "Ủy ban Nhân dân tỉnh Bắc Ninh"
       },
-      image: "/image/govern/logo tỉnh bắc ninh.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     },
     {
       id: 18,
@@ -203,7 +203,7 @@ const Partners: React.FC = () => {
         en: "Phu Tho Province People's Committee",
         vi: "Ủy ban Nhân dân tỉnh Phú Thọ"
       },
-      image: "/image/govern/Logo_tỉnh_Phú_Thọ.png"
+      image: "https://via.placeholder.com/300x200/CCCCCC/666666?text=Partner+Logo"
     }
   ];
 

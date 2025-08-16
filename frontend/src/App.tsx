@@ -17,6 +17,8 @@ import BusinessApplicationServicePage from './components/pages/BusinessApplicati
 import MeServicePage from './components/pages/MeServicePage';
 import ScrollToTop from './components/ui/ScrollToTop';
 import Services from './components/ui/Services';
+import News from './components/ui/News';
+import Blog from './components/pages/Blog';
 
 function App() {
   const { i18n } = useTranslation();
@@ -68,6 +70,8 @@ function App() {
           <Route path="/services/broadcasting" element={<BroadcastingServicePage />} />
           <Route path="/services/business-application" element={<BusinessApplicationServicePage />} />
           <Route path="/services/me" element={<MeServicePage />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/blog/:id" element={<Blog />} />
         </Routes>
         <Footer />
       </div>

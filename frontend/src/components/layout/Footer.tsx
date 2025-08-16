@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiMapPin, FiPhone, FiMail, FiFacebook, FiLinkedin, FiSend, FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'react-i18next';
-import logoImg from '../../../image/LOGO.png';
+
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             <div>
               <Link to="/" className="text-white font-bold text-3xl flex items-center mb-4">
                 <div className="flex items-center justify-center h-28 md:h-32 lg:h-36 w-32 md:w-36 lg:w-40 overflow-hidden">
-                  <img src={logoImg} alt="NetCorp Logo" className="h-full w-full object-cover" />
+                  <img src="/image/LOGO.png" alt="NetCorp Logo" className="h-full w-full object-cover" />
                 </div>
               </Link>
               <p className="text-gray-400 mb-6 -mt-2">

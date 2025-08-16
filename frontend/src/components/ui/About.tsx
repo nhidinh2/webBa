@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import Breadcrumb from './Breadcrumb';
-import netcorpImg from '../../../image/LOGO.png';
+
 
 type TabType = 'humanResource' | 'visionMission' | 'coreValues';
 
@@ -107,7 +107,7 @@ const About: React.FC = () => {
             >
               <div className="relative rounded-3xl overflow-hidden aspect-[3/2]">
                 <img
-                  src={netcorpImg}
+                  src="/image/LOGO.png"
                   alt="NetCorp Team"
                   className="w-full h-full object-contain"
                 />
